@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 3D转换</title>
+	<script src="js/jquery-1.11.2.js"></script>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000;
+			height: 1000px;
+		}
+		.moonpic{
+			position: absolute;
+			left: 400px;
+			top: 300px;
+		}
+		.rocket {
+			position: absolute;
+			left: 0;
+			top: 950px;
+			width: 149px;
+			height:249px;
+		}
+
+		.rocket i{
+			display: block;
+			width: 149px;
+			height: 249px;
+			background-image: url('img/images/rocket_button_up.png');
+			background-repeat: no-repeat;
+			background-position: 0 0;
+
+		}
+		.rocket:hover i {
+			background-position: -149px 0;
+		}
+		.active {
+			animation:rocketWap 2s ease forwards, rocketFa 5s ease 2s forwards;
+		}
+
+		@keyframes rocketWap {
+			0% {
+				top: 945px;
+			}
+			100% {
+				top: 300px;
+			}
+		}
+		@keyframes rocketFa {
+			0%{
+				transform: rotate(90deg);
+				top: 300px;
+				background-position: -745px 0;
+				}
+			30% {
+				left: 200px;
+				top: 300px;
+				background-position: -745px 0;
+			}
+			50%{
+				transform: rotate(90deg);
+				left: 400px;
+				opacity: 0;
+				top: 300px;
+				background-position: -745px 0;
+			}
+			51%{
+				transform: rotate(0deg);
+				left:640px;
+				opacity: 0;
+				top: 300px;
+				background-position: -745px 0;
+			}
+			75%{
+				transform: rotate(0deg);
+				background-position: -299px 0!important;
+				left: 640px;
+				opacity: 1;
+				top: 300px;
+			}
+			100%{
+				transform: rotate(0deg);
+				background-position: -149px 0!important;
+				left: 640px;
+				top: 460px;
+				opacity: 1;
+			}
+		}
+
+		
+		
+	
+	</style>
+	<script>
+		$(function () {
+			var n = 0;
+			
+			$('.rocket').on('click', function () {
+				$(this).addClass('active');
+				
+				var timer = setInterval(function () {
+					n++;
+					
+					$('.rocket i').css('background-position', -149*n + 'px 0px')
+					
+				}, 200);
+				
+				setTimeout(function () {
+					clearInterval(timer);
+				},1000)
+				
+				setTimeout(function () {
+					$('.rocket i').css('background-position', '-149px 0px')
+				},5000)
+			})
+		})
+	</script>
+</head>
+<body>
+	<img src="img/images/pic-moon.jpg" class="moonpic">
+	<div class="rocket">
+		<i></i>
+	</div>
+</body>
+</html>
