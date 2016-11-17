@@ -1,0 +1,73 @@
+ .yougou{width: 100%;height: 100%;background: #f8f8f8;}
+			.nav_1{width: 1088px;height: 30px;margin:0 auto;}
+			
+			.nav_body{width: 1190px;height: 89px;padding: 22px 0 15px 0;margin: 0 auto;overflow: hidden;}
+			.nav_body_1{background: #f8f8f8 ;float: left;width: 203px;height: 89px;}
+			.nav_body_2{width: 526px;height: 89px;float: left;margin-left: 105px;}
+			.nav_body_2_1{width: 526px;height: 29px;border: 1px solid #000;margin-top: 21px;}
+			.nav_k{height: 29px;width: 3px;float: left;}
+			.nav_inp{width: 433px;height: 29px;float: left;}
+			.nav_inp input{width: 433px;border: 0 none;height: 24px;margin-top: 3px;padding-left: 4px;padding-right: 4px;line-height: 24px;font-size: 14px;}
+			.nav_f{width: 83px;height: 29px;background: #000 url("../img/img.png") no-repeat -115px -532px;float: right;}
+			.nav_f a{display: block;height: 29px;width: 83px;}
+			.nav_body_2_2{height: 37px;width: 526px;float: left;line-height: 37px;}
+			.nav_body_2_2 a{font-size: 14px;line-height: 16px;}
+			.nav_body_2_2 .nav_a1,.nav_a2{color: red;}
+			.nav_body_2_2 a:hover{color: red;}
+			.nav_body_3{width: 148px;height: 89px;float: right;}
+			.nav_body_3_1{height: 33px;width: 146px;margin-top: 21px;float: left;border: 1px solid #d1d3d4;position: relative;}
+			.nav_s{width: 22px;height: 22px;margin: 5px 5px 0 10px;float: left;background: url("../img/img.png") no-repeat -90px -530px;}
+			.nav_s_2{width: 6px;height: 3px;margin-top: 14px;margin-right:2px;background: url(../img/img.png) no-repeat -88px -552px;float: right;}
+			.nav_s_1{width: 100px;height: 20px;margin-top: 7px;float: left;text-align: center;line-height: 20px;}
+			.nav_s_1 span{color: red;}
+			.nav_dis{background: #fff;border: 1px solid #ccc;height: 48px;width: 300px;display: none;font-size: 14px;text-align: center;line-height: 60px;position: absolute;right: 0;top: 33px;z-index: 20;}
+			
+			.nav_body_3_2{width: 148px;height: 19px;float: right;line-height: 19px;font-size: 14px;margin-top: 15px;}
+			.nav_body_3_2 a{color: red;}
+			
+			.h_foot_box{width: 100%;height: 39px;border-bottom: 3px solid #000;}
+			.h_f_body{width: 1190px;height: 39px;margin: 0 auto;position: relative;}
+			.h_drop{position: absolute;width: 200px;height: 42px;float: left;z-index: 1002;position: absolute;top: 0;left: 0;}
+			.h_drop h2{background: #000;}
+			.h_drop h2 a{color: #fff;display: block;height: 39px;text-align: center;line-height: 39px;font-size: 18px;}
+			.h_f_body ul{float: right;width: 990px;height: 39px;list-style: none;/*overflow: hidden;*/}
+			.h_f_body li{height: 39px;float: left;line-height: 39px;}
+			.h_f_body a{height: 39px;padding: 0 13px;color: #000000;font-size: 17px;font-weight: bold;}
+			.h_f_body a:hover{color: red;}
+			.h_f_body .h_li3{float: right;}
+			.h_f_body .h_li2{float: right;}
+			.h_f_body .h_li1{float: right;}
+			.h_f_body .h_li3 a{color: red;}
+			.h_f_body .tip_con{width: 22px;height: 15px;background: url(../img/new-tip.gif) no-repeat;position: absolute;right: 137px;}
+		    
+		    .h_drop_box{width: 200px;height: 479px;border-top: 3px solid #000;}
+		    .h_drop_box .h_drop_ul{width: 198px;height: 476px;list-style: none;background: #f5f5f5;position: relative;border: 1px solid #d1d3d4;border-top: 0;} 
+		    .h_drop_box .h_drop_ul li{/*overflow: hidden;*/height: 44px;padding: 12px 10px 12px;width: 90%;position: relative;}
+		    
+		    .h_drop_ul .titt{height: 20px;width: 178px;margin-bottom: 6px;}
+		    .h_drop_ul .titt h3{padding-top: 3px;float: left;height: 20px;}
+		    .h_drop_ul .titt i{float: left;width: 26px;height: 20px;background: url(../img/shoe.jpg) no-repeat 0px -208px;/*overflow: hidden;*/display: inline-block;}
+		    .h_drop_ul .titt a{float: left;padding: 0;line-height: 20px;color:#666;font-size: 12px;display: block;height: 20px;}
+		    .h_drop_ul #drop_p{line-height:12px;text-align: center;}
+		    .h_drop_ul  #drop_p a{font-size: 12px;padding: 0 0 0 5px;color: #666;font-weight: normal;}
+		    .h_drop_ul .titt_h1 i{background: url(../img/shoe.jpg) no-repeat 0 -182px;}
+		    .h_drop_ul .titt_h2 i{background: url(../img/shoe.jpg) no-repeat 0 -26px;}
+		    .h_drop_ul .titt_h3 i{background: url(../img/shoe.jpg) no-repeat 0 -104px;}
+		    .h_drop_ul .titt_h4 i{background: url(../img/shoe.jpg) no-repeat 0 -156px;}
+		    .h_drop_ul .titt_h5 i{background: url(../img/shoe.jpg) no-repeat 0 -130px ;}
+		    .h_drop_ul .titt_h6 i{background: url(../img/shoe.jpg) no-repeat 0 -1px;}
+		    
+		    .h_drop_box .drop_dis1{display: none;height: 478px;width: 148px;border: 1px solid #d1d3d4;position: absolute;top: 0;right: -150px;z-index: 20;background: #fff;}
+		    .h_drop_box .drop_con_1 {margin: 0 auto;width: 130px;height: 120px;}
+		    .h_drop_box .drop_con_1 a{display: block;margin-top: 1px;font-size: 12px;font-weight: normal;height: 20px;}
+		    .h_drop_box .drop_con_1 img{height: 28px;width: 120px;display:block;}
+		    .h_drop_box .drop_con_1  p a{width: 60px;padding: 0;margin:5px 0 0 5px;text-align: center;height: 14px;line-height: 14px;float: left;}
+		    .h_drop_box .drop_con_1  p{height: 90px;padding: 0;margin-top: 5px;}
+		    .h_drop_box .drop_con_1  .drop_tp{height: 70px;padding: 0;margin-top: 5px;}
+		    .h_drop_box .drop_td{height: 100px;}
+		    .h_drop_box .drop_dis11{position: absolute;top: -68px;right: -150px;}
+		    .h_drop_box .drop_dis22{position: absolute;top: -136px;right: -150px;}
+		    .h_drop_box .drop_dis33{position: absolute;top: -204px;right: -150px;}
+		    .h_drop_box .drop_dis44{position: absolute;top: -272px;right: -150px;}
+		    .h_drop_box .drop_dis55{position: absolute;top: -340px;right: -150px;}
+		    

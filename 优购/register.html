@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+		<style type="text/css">
+			.nav_1{width: 990px;height: 30px;margin:0 auto;}
+			.uc_hd{width: 100%;height: 69px;z-index: -1;}
+			.uc_con{width: 990px;height: 42px;padding: 13px 0;margin:0 auto ;overflow: hidden;}
+			.uc_con h2{float: left;display: block;padding: 5px 30px 5px 0;border-right:1px solid #dfdedf ;margin-right: 30px;}
+			.uc_con .uc_p{float: left;padding: 12px 0 0  0;}
+			.uc_p a{font-size: 18px;}
+			.uc_p2{display: none;}
+			
+			
+			.cen_new{width: 100%;height: 553px;position: relative;}
+			.cen_new img{width: 1263px;height: 553px;}
+			.cen_box{width: 378px;height: 553px;position: relative;position:absolute;left: 50%;top: 0;margin-left: 115px;z-index: 1;}
+			.cen_con{box-sizing: border-box;;width: 378px;height: 450px;margin-top: 50px;background: #fff;overflow: hidden;}
+			.cen_con ul{float:left;display: block;border-bottom: 1px solid #f3f3f3;margin: 24px 15px 0 15px;list-style: none;width: 348px;height: 41px;}
+			.cen_con .cen_l1{float: left;height: 40px;line-height: 40px;text-align: center;width: 123px;background: #333;margin:0 5px 0 53px ;}
+			.cen_con .ent_1{color: #fff;}
+			.cen_con .cen_l2{background: #f3f3f3;float: left;height: 40px;line-height:40px ;text-align: center;width: 123px;}
+			.cen_con .ent_2{color: #000;}
+			.cen_form{width: 348px;height: 317px;padding-top: 30px;margin:0 15px ;float: left;padding-left: 10px;}
+			
+			.cen_input{border: 1px solid #e3e2e2;box-sizing: border-box;height: 38px;margin: 0;width: 313px;}
+			.ures_name{display: block;float: left;height: 36px;overflow: hidden;width: 48px;background: url("img/5.png") no-repeat -168px -27px;}
+			.cen_input input{outline: none;background: 0;border: 0;float: right;height: 36px;line-height: 36px;padding: 0;width: 235px;}
+			.cen_item dt{display: block;height: 28px;width: 100%;float: left;line-height: 18px;}
+			.email_tip,.email_pass_tip{display: none;margin-top: 4px;width: 330px;height:28px;font-size: 12px;color: red;text-align: right;}
+			
+			.cen_input_bg{border: 1px solid #e3e2e2;box-sizing: border-box;height: 38px;margin: 0;width: 313px;float: left;position: relative;}
+			.pass_name{display: block;float: left;height: 36px;overflow: hidden;width: 48px;background: url("img/5.png") no-repeat -168px -60px;}
+			.cen_input_bg input{outline: none;background: 0;border: 0;float: right;height: 36px;line-height: 36px;padding: 0;width: 235px;}
+			
+			.cen_form .p1{width: 313px;height: 26px;display: inline-block;text-align: right;margin-right: 17px;}
+			.cen_form .p1 a{line-height: 26px;text-decoration: underline;color: #666;text-align: right;}
+		    .cen_form .p2{text-align: center;width: 338px;}
+		    .cen_form .denglu{display: block;background: #e1373a;border: 0;color: #fff;font-size: 16px;height: 40px;line-height: 40px;width: 312px;cursor: pointer;padding: 1px 6px;margin-right: 15px;}
+		    .cen_form .p3{color: #999;margin-top: 10px;text-align: center;font-size: 12px;line-height: 20px;}
+		    .cen_form .p4 a{line-height: 54px;padding: 9px 17px;margin: 0 5px;text-align: center;}
+		    .cen_form .p4{color: #DFDEDF;margin-left: 18px;}
+		    .cen_form .p4 .wx{background: url("img/5.png") no-repeat -37px -20px;}
+		    .cen_form .p4 .zf{background: url("img/5.png") no-repeat -74px -20px;}
+		    .cen_form .p4 .qq{background: url("img/5.png") no-repeat -110px -20px;}
+		    .cen_form .p4 .xl{background: url("img/5.png") no-repeat -36px -57px;}
+		    .cen_form .p4 .rr{background: url("img/5.png") no-repeat -74px -57px;}
+		    #passshow{text-align: center;}
+		    #uresshow{text-align: center;}
+		    
+		    
+		    
+		    .foot1{width: 100%;height: 20px;}
+		    .foot2{width: 100%;height: 20px;color: #666;text-align: center;line-height: 20px;}
+		    .foot2 a:hover{color: red;}
+		    
+		    .pass_form{display: none;width: 338px;height: 397px;float: left;margin: 0 15px;padding: 10px 0 0 10px;}
+		    .phone1{height: 36px;width: 311px;border: 1px solid #AAAAAA;}
+		    .spanall {font-size: 14px;text-align: center;line-height: 36px;display: block;width: 60px;height: 36px;float: left;margin-left: 10px;}
+		    .phone1 i{cursor: pointer;display: block;float: right;width: 10px;height: 10px;margin-top: 13px;background: url(img/5.png) no-repeat -167px 5px;}
+		    .zc_btn {outline: none;display: block;height: 36px;width: 235px;float: right;border: none;}
+		    .phone1_show{display: none;width: 305px;height: 18px;font-size: 14px;line-height: 18px;color: red;}
+		    .phone1_show i{display: block;float: left;width: 25px;height: 25px;background: url(img/5.png) no-repeat -180px -95px ;}
+		    .zc_none{width: 305px;height: 24px;}
+		    .test{width: 198px;height: 36px;border:  1px solid #AAAAAA;position: relative;}
+		    .yanzheng{width: 128px;height: 36px;}
+		    .yanzheng_box{width: 100px;height: 36px;position: absolute;top: 0;right: -110px;}
+		    .get{width: 233px;height: 36px;border:  1px solid #AAAAAA;position: relative;}
+		    .yanzheng2{width: 155px;height: 36px;}
+		    .yzbox_h{background: #999999;font-size: 12px;color: #fff;width: 70px;text-align: center;line-height: 36px;}
+		    .pass_yz{width: 311px;height: 36px;border: 1px solid #AAAAAA ;}
+		    .yanzheng3{width: 235px;}
+		    .pass_p{color: #aaa;height: 20px;line-height: 20px;font-size: 12px;text-align: center;}
+		    .yzbox_sj{text-align: center;font-size: 18px;font-weight: bold;color: blue;line-height: 36px;}
+		    .denglu{}
+		    .bk{background: #f3f3f3;color: #000;}
+		    .wt{background: #333;color: #fff;}
+		</style>
+	</head>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.nav_1 div').hover(function(){
+				$(this).children('ul').show();
+			},function(){
+				$(this).children('ul').hide();
+			});
+			$('.nav_1 a').hover(function(){
+				$(this).addClass('active').parent('div').siblings().removeClass('active');
+				$(this).parent('div').addClass('hover').siblings().removeClass('hover');
+			},function(){
+				$(this).removeClass('active');
+				$(this).parent('div').removeClass('hover');
+			})
+			$('.nav_1_2').hover(function(){
+				$(this).children('div').show();
+			},function(){
+				$(this).children('div').hide();
+			})
+			
+			
+			$('#password').blur(function(){
+				if($(this).val()==''){
+					$('#passshow').show();
+				}else{
+					$('#passshow').hide();
+				}
+			})
+			$('#uresname').blur(function(){
+				if($(this).val()==''){
+					$('#uresshow').show();
+				}else{
+				    $('#uresshow').hide();
+				}
+			})
+			
+			$('.cen_l1').click(function(){
+				$('.cen_form').show();
+				$('.pass_form').hide();
+				$('.cen_l2').removeClass('bk');
+				$('.uc_p2').hide();
+				$('.uc_p1').show();
+			})
+			$('.cen_l2').click(function(){
+				$('.pass_form').show();
+				$('.cen_form').hide();
+				$('.cen_l1').addClass('wt');
+				$(this).addClass('bk');
+				$('.uc_p2').show();
+				$('.uc_p1').hide();
+			})
+			
+			
+			$('.yanzheng5').blur(function(){
+				if($(this).val()==''){
+					$('.show_1').show();
+				}else{
+					$('.show_1').hide();
+				}
+			})
+			$('.yanzheng').blur(function(){
+				if($(this).val()==''){
+					$('.show_2').show();
+				}else if($(this).val()!=$('.yzbox_sj').text()){
+					$('.show_cuowu').show();
+					$('.show_2').hide();
+				}else{
+					$('.show_cuowu').hide();
+				}
+			})
+			$('.yanzheng2').blur(function(){
+				if($(this).val()==''){
+					$('.show_3').show();
+				}else{
+					$('.show_3').hide();
+				}
+			})
+			$('.yanzheng3').blur(function(){
+				if($(this).val()==''){
+					$('.show_4').show();
+				}else{
+					$('.show_4').hide();
+				}
+			})
+			$('.yanzheng4').blur(function(){
+				if($(this).val()==''){
+					$('.show_5').show();
+				}else{
+					$('.show_5').hide();
+				}
+			})
+			
+			
+			$(".yanzheng").click(function(){
+					str = "";
+					for(var i = 0;i < 4;i++){
+						var num = parseInt(Math.random()*10) % 3;
+						var randomNum = 0;
+						if(num == 0){
+							randomNum = parseInt(Math.random()*1000) % 10 + 48;
+						}
+						if(num == 1){
+							randomNum = parseInt(Math.random()*1000) % 25 + 65;
+						}
+						if(num == 2){
+							randomNum = parseInt(Math.random()*1000) % 25 + 97;
+						}
+						
+						str = str.concat(String.fromCharCode(randomNum));
+					}
+					
+					$(".yzbox_sj").html(str);
+				})
+                $('.denglu').click(function(){
+                	$.cookie('usename',$('#uresname').val(),{expires:7});
+                })
+           
+		})
+	</script>
+	<body>
+		<div class="box">
+			<div class="head_box">
+				<div class="nav_1">
+					<div class="nav_1_1"><a href="" id="">时尚商城</a></div>
+					<div class="nav_1_2"><a href=""><i class="phone"></i>手机优购<i class="tip"></i></a>
+						<div class="phone_con"><a href=""><img src="img/2.png"/></a>
+							<p><span><a href="">下载安装</a></span><strong><a href="">优购客户端</a></strong></p></div>
+					</div>
+					<div class="nav_1_3">
+						<div class="nav_ures">
+						<div class="nav_ures_1"><a href="#">登录</a></div>
+						<div class="nav_ures_2"><a href="#">注册</a></div>
+						</div>
+						<div class="my_show link_box"><a href="#" class="a1">我的优购</a><ul class="show_con"><li><a href="#">我的收藏</a></li></ul></div>
+						<div class="my_order link_box"><a href="#" class="a2">我的订单</a></div>
+						<div class="my_notice link_box"><a href="#" class="a3">公告</a>
+							<ul>
+								<li><a href="#">运动新风尚 新品5折起</a></li>
+								<li><a href="#">摩登男装 秋冬大促 全场1折起</a></li>
+								<li><a href="#">潮靴秀美腿 价比11.11</a></li>
+								<li><a href="#">女装初冬热促 爆款2折起</a></li>
+								<li><a href="#">库房发货时间调整说明</a></li>
+							</ul></div>
+						<div class="my_more link_box"><a href="#" class="a4">更多</a><ul><li><a href="#" class="at">收藏优购</a></li><li><a href="#">帮助</a></li></ul></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="uc_hd">
+				<div class="uc_con">
+					<h2><a href="#"><img src="img/3.png"/></a></h2>
+					<p class="uc_p uc_p1"><a href="#">用户登录</a></p>
+					<p class="uc_p uc_p2"><a href="#">新用户注册</a></p>
+				</div>
+			</div>
+			<div class="cen_new">
+				<a href="#"><img src="img/4.jpg"/></a>
+				<div class="cen_box">
+					<div class="cen_con">
+						<ul><li class="cen_l1"><a class="ent_1" href="#">登录</a></li><li class="cen_l2"><a class="ent_2" href="#">注册</a></li></ul>
+						<div class="cen_form">
+						    <form onsubmit="return false;" id="form_box" method="post">
+								<dl class="cen_item clearfix">
+									<dd>
+										<div class="cen_input">
+											<i class="ures_name"></i>
+											<input type="text" id="uresname" class="email_" maxlength="50" placeholder="手机号/会员名称/邮箱"/>
+										</div>
+									</dd>
+									<dt>
+										<div class="email_tip" id="uresshow">请输入账号</div>
+									</dt>
+								</dl>
+								<dl class="cen_item clearfix">
+									<dd>
+										<div class="cen_input_bg">
+											<i class="pass_name"></i>
+											<input type="password" id="password" class="email_" maxlength="50" placeholder="请输入密码"/>
+										</div>
+									</dd>
+									<dt>
+										<div class="email_pass_tip" id="passshow">请输入密码</div>
+									</dt>
+								</dl>
+								<p class="p1"><a href="#">忘记密码？</a></p>
+								<p class="p2">
+									<a class="denglu" href="index1.html">点击登录</a>
+								</p>
+								<p class="p3">使用合作网站账号登录优购：</p>
+								<p class="p4">
+									<a href="#" class="wx"></a> | <a href="#" class="zf"></a> | <a href="#" class="qq"></a> | <a href="#" class="xl"></a> | <a href="#" class="rr"></a>
+								</p>
+						    </form>
+					    </div>
+					    <div class="pass_form">
+					    	<div class="phone1">
+					    		<span class="spanall">手机号<i></i></span><input class="zc_btn yanzheng5" type="text" placeholder="请输入你的手机号"/>
+					    	</div>
+					    	<div class="zc_none"><div class="phone1_show  show_1"><i></i>请输入手机号码</div></div>
+					    	<div class="test">
+					    		<span class="spanall">验证码</span>
+					    		<input class="zc_btn yanzheng" type="text"/>
+					    		<div class="yanzheng_box yzbox_sj"></div>
+					    	</div>
+					    	<div class="zc_none"><div class="phone1_show show_2"><i></i>请输入验证码</div><div class="phone1_show show_cuowu"><i></i>验证码错误</div></div>
+					    	<div class="get">
+					    		<span class="spanall" style="font-size: 12px;">短信验证码</span>
+					    		<input class="zc_btn yanzheng2" type="text" />
+					    		<div class="yanzheng_box yzbox_h">获取验证码</div>
+					    	</div>
+					    	<div class="zc_none"><div class="phone1_show show_3"><i></i>请输入手机验证码</div></div>
+					    	<div class="pass_yz">
+					    		<span class="spanall">密码</span>
+					    		<input class="zc_btn yanzheng3" type="text" placeholder="6-25位以内"/>
+					    	</div>
+					    	<div class="zc_none"><div class="phone1_show show_4"><i></i>请输入密码</div></div>
+					    	<div class="pass_yz">
+					    		<span class="spanall">确认密码</span>
+					    		<input class="zc_btn yanzheng4" type="text"/>
+					    	</div>
+					    	<div class="zc_none"><div class="phone1_show show_5"><i></i>两次密码不同</div></div>
+					    	<p class="pass_p"><input type="checkbox" checked="checked"/> 我已同意<a style="color: red;text-decoration: none;font-size: 12px;">《优购会员注册协议》</a></p>
+					        <p style="height: 32px;text-align: center;line-height: 32px;">
+					        	<a style="cursor: pointer;display: block;width: 310px;height: 32px;background: #e1373a;color: #fff;font-size: 16px;font-weight: bold;text-align: center;line-height: 32px;">确认并注册</a>
+					        </p>
+					    </div>
+					</div>
+				</div>
+				<div class="foot1"></div>
+				<div class="foot2">Copyright;&copy;2011-2014 Yougou Technology Co,Ltd. <a href="#">粤ICP备09070608号-4</a> 增值电信业务经营许可证：<a>粤B2-20090203</a></div>
+			</div>
+			
+		</div>
+	</body>
+</html>

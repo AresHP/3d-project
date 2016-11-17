@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+		<style type="text/css">
+			.shopcar_hd{width: 990px;height: 50px;margin: 0 auto;margin-top: 10px;font-size: 12px;}
+		    .shopcar_hd h1{display: block;float: left;width: 355px;height: 50px;background: url(img/carlogo1.jpg) no-repeat 0 0px;}
+		    .car_hdr{width: 600px;height: 20px;line-height: 20px;background: #e8e8e8;overflow: hidden; position: relative;float: right;margin-top: 20px;font-size: 12px;color: #666;}
+		    .car_hdr li{width: 200px;height: 20px;list-style: none;float: left;text-align: center;font-size: 12px;position: relative;}
+		    .car_hdr em{text-align: center;font-style: normal;width: 0;height: 0;line-height: 0;position: absolute;right: -12px;top: -2px;border: 12px dashed transparent; border-left: 12px solid #fff;border-right: 0;}
+		    .car_hdr i{font-style: normal;width: 0;height: 0;line-height: 0;position: absolute;border-color: transparent;right: -9px;top: 0;border: 10px dashed transparent;border-left: 10px solid #e8e8e8;border-right: 0;}
+		    .curren{color: #fff;background: #f90;z-index: 1;}
+		    .car_hdr .i_cur{font-style: normal;width: 0;height: 0;line-height: 0;position: absolute;border-color: transparent transparent transparent #f90;right: -9px;top: 0;border: 10px dashed transparent #f90;border-left: 10px solid #f90;border-right: 0;}
+		    .ygcheck{overflow: hidden;position: relative;vertical-align: middle;font-size: 1px;}
+		    .skin{font-style: normal; margin-top: 5px; margin-left: 20px; float: left;height: 15px;padding: 0 0 0 15px;cursor: pointer;width: 0;display: block;}
+		    .none{position: absolute;left:-16px;top:2px;display: block;background: #fff;}
+		    .car_dl{width: 983px;padding-left: 5px;height: 72px;clear: both;height: 0;display: block;content: ".";}
+		    .fl{ float: left;}
+		    .rel{ position: relative;z-index: 99;}
+		    .colchek{padding-left: 8px;padding-top: 29px;    width: 20px;    text-align: left;}
+		    .con1{width: 80px;height: 72px;}
+		    .con1 a{border: 1px solid #e6e6e6;padding: 5px;background: #fff;display: inline-block;position: relative;text-decoration: none;}
+		    .con2{width: 250px;padding: 18px 52px 0 20px;text-align: left;}
+		    .con3{margin-left: 10px;padding-top: 18px;line-height: 18px;word-wrap: break-word;word-break: break-all;width: 105px;}
+		    .con4{margin-left: 40px;width: 60px;padding-top: 25px;text-align: center;}
+		    .con5{width: 110px;text-align: center;padding-top: 23px;}
+		    .con5 span {display: inline-block;width: 16px;height: 23px;line-height: 21px;font-size: 14px;cursor: pointer;border: 1px solid #ccc;border-right: 0;background: #f0f0f0;float: left;}
+		    .con5 .num-edit-cut{margin-left: 25px;}
+		    
+		    
+		    .con5 .middlespan{background: #fff;}
+		    .con6{font-weight: bold;color: red;width: 108px;text-align: center;padding-top: 25px;}
+		    .con7{color: #aaa;font-size: 12px;width: 118px;text-align: center;padding-top: 16px;}
+		    .con7 a{color: #aaa;font-size: 12px;cursor: pointer;}
+		    .car_foot{width: 988px;height: 15px;}
+		    .car_ul{margin-left: 17px;color: #aaa;width: 988px;height: 40px;overflow: hidden;list-style: none;}
+		    .car_li1{float: left;height: 30px;padding: 10px 37px 0 0;width: 54px;}
+		    .car_li2{float: left;height: 30px;padding: 10px 37px 0 0;width: 60px;}
+		    .car_li3{float: left;height: 30px;padding: 10px 37px 0 0;width: 24px;}
+		    .car_ul_div{width: 1000px;height:10px ;border-bottom: 1px solid #eee;}
+		    .car_ft{width: 990px;height: 54px;margin: 0 auto;background: #eee;overflow: hidden;}
+		    .car_a{float: left;width: 126px;height: 43px;display: inline-block;font-size: 16px;text-align: center;margin: 6px 0 0 35px;background: url(img/car_foot.png) no-repeat -30px -5px;}
+		    .car_ft_div{font-size: 12px;float: left;margin: 15px 0 0 15px;width: 80px;height: 18px;}
+		    .car_ft_right{float: right;font-size: 12px;height: 54px;width: 345px;}
+		    .car_ft_right .jiesuan{overflow:hidden;display: inline-block;vertical-align: middle;width: 129px;height: 54px;background: #ff5000;text-indent: 0;text-align: center;color: #fff;font-size: 14px;line-height: 54px;margin-left: 50px;}
+		    .car_last{clear:both;width:990px;height: 66px;margin:0 auto;margin-top: 15px;font-size: 12px;margin-bottom: 20px;}
+		    .first_tr{width:988px;height:104px;border-bottom: 1px solid #eee;color: #aaa;text-align: center;font-size: 12px;}
+		    .first_td{border-bottom: 1px solid #eee ;}
+		    .tab{width: 988px;border-collapse: collapse;border-spacing: 0;}
+		    .car_box{width:998px;border: 3px solid #eee;border-width: 1px 1px 0;clear: both;margin:  0 auto;font-size: 12px;}
+		    .first_car{width: 990px;height: 104px;}
+		    .car_lt{width: 990px;height: 60px;margin: 0 auto;border-top: 1px solid #d9d9d9;text-align: center;margin-top: 10px;color:#a9a9a9;}
+		</style>
+	</head>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/yundong.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			if($.cookie("color")!='null'){
+				$('.tab').append('<tbody></tbody>');
+			$('tbody').append('<tr class="first_tr"></tr>');
+			$('.first_tr').append('<td class="first_td" colspan="7"></td>');
+			$('.first_td').append("<div class='first_car'></div>");
+			$('.first_car').append('<div class="car_foot"></div><dl class="car_dl"></dl><div class="car_foot"></div>');
+			$('.car_dl').append('<dd class="fl rel colchek"></dd><dt class="con1 rel fl "><a><img src="'+$.cookie("img")+'"/></a></dt><dd class="con2 rel fl ">'+$.cookie("name")+'</dd><dd class="con3 rel fl"></dd><dd class="con4 rel fl">'+$.cookie("money")+'</dd><dd class="con5 rel fl"><span class="num-edit-cut">-</span><span class="middlespan">'+$.cookie("num")+'</span><span class="num-edit-add">+</span></dd><dd class="con6 fl">'+$.cookie("price")+'</dd><dd class="con7 fl"><p><a>移入收藏夹</a></p><p><a class="shanchu">删除</a></p></dd>');
+			$('.colchek').append('	<input type="checkbox" class="car_btn2"/>');
+			$('.con3').append('<div class="con3_box"></div>');
+			$('.con3_box').append('<p>颜色:'+$.cookie("color")+'</p><p>尺码:'+$.cookie("size")+'</p>');
+			$('.car_box').append('<ul class="car_ul"><li class="car_li1"><input type="checkbox" class="car_btn3"/>全选</li><li class="car_li2">移入收藏夹</li><li class="car_li3">删除</li></ul>');
+			$('.car_box').append('<div class="car_ul_div"></div>');
+			
+			}
+			var i =1;
+			$('.num-edit-cut').click(function(){
+				i--;
+				$('.middlespan').text(i);
+				$('.con6').text(699*i);
+				$('.car_ft_right strong').text(699*i);
+			})
+			$('.num-edit-add').click(function(){
+				i++;
+				$('.middlespan').text(i);
+				$('.con6').text(699*i);
+				$('.car_ft_right strong').text(699*i);
+			})
+			$('.shanchu').click(function(){
+				$('.first_td').remove();
+				$.cookie("color",null);
+				$.cookie("name",null);
+				$.cookie("money",null);
+				$.cookie("size",null);
+				$.cookie("num",null);
+				$.cookie("price",null);
+				$.cookie("img",null);
+				$('.car_ft_right strong').text(0);
+			})
+			
+			$('.car_btn1').click(function(){
+				if($(this).attr('checked')=='checked'){
+					$('.car_btn2').attr('checked','checked');
+				    $('.car_btn3').attr('checked','checked');
+				}else{
+					$('.car_btn2').removeAttr('checked');
+				    $('.car_btn3').removeAttr('checked');
+				}
+			})
+			$('.car_btn2').click(function(){
+				if($(this).attr('checked')!='checked'){
+					$('.car_btn1').removeAttr('checked');
+				    $('.car_btn3').removeAttr('checked');
+				}
+			})
+			$('.car_btn3').click(function(){
+				if($(this).attr('checked')=='checked'){
+					$('.car_btn2').attr('checked','checked');
+				    $('.car_btn1').attr('checked','checked');
+				}else{
+					$('.car_btn2').removeAttr('checked');
+				    $('.car_btn1').removeAttr('checked');
+				}
+				
+			})
+			
+         $('#shopp_btn1').click(function(){
+         	$('#shopp_ul').stop().animate({left:-940});
+         	$('#shopp_span').text(2);
+         	
+         })
+          $('#shopp_btn2').click(function(){
+         	$('#shopp_ul').stop().animate({left:20});
+         	$('#shopp_span').text(1);
+         })
+		})
+	</script>
+	<body>
+		<div class="yougou">
+			<div class="box">
+				<div class="head_box">
+					<div class="nav_1">
+						<div class="nav_1_1"><a href="" id="">时尚商城</a></div>
+						<div class="nav_1_4"><span class="sp1"><a>首尔站</a></span><span class="sp2"><a>Saoul Station</a></span></div>
+						<div class="nav_1_2"><a href=""><i class="phone"></i>手机优购<i class="tip"></i></a>
+							<div class="phone_con"><a href=""><img src="img/2.png"/></a>
+								<p><span><a href="">下载安装</a></span><strong><a href="">优购客户端</a></strong></p></div>
+						</div>
+						<div class="nav_1_3">
+							<div class="nav_ures">
+							<div class="nav_ures_1"><a href="register.html">登录</a></div>
+							<div class="nav_ures_2"><a href="register.html">注册</a></div>
+							</div>
+							<div class="my_show link_box"><a href="#" class="a1">我的优购</a><ul class="show_con"><li><a href="#">我的收藏</a></li></ul></div>
+							<div class="my_order link_box"><a href="#" class="a2">我的订单</a></div>
+							<div class="my_notice link_box"><a href="#" class="a3">公告</a>
+								<ul>
+									<li><a href="#">运动新风尚 新品5折起</a></li>
+									<li><a href="#">摩登男装 秋冬大促 全场1折起</a></li>
+									<li><a href="#">潮靴秀美腿 价比11.11</a></li>
+									<li><a href="#">女装初冬热促 爆款2折起</a></li>
+									<li><a href="#">库房发货时间调整说明</a></li>
+								</ul></div>
+							<div class="my_more link_box"><a href="#" class="a4">更多</a><ul><li><a href="#" class="at">收藏优购</a></li><li><a href="#">帮助</a></li></ul></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="shopcar_hd">
+					<h1></h1>
+					<div class="car_hdr">
+						<ul>
+							<li class="curren">我的购物车<em></em><i class="i_cur"></i></li>
+							<li>提交订单中心<em></em><i></i></li>
+							<li>成功提交订单</li>
+						</ul>
+					</div>
+				</div>
+				<div style="width: 100%;height: 206px;">
+					<div class="car_box">
+						<table class="tab">
+							<thead style="height: 42px;">
+								<tr style="font-weight: normal;border-bottom: 1px solid #eee;color: #aaa;text-align: center;font-size: 12px;">
+									<th style="font-weight: normal;width:59px;height: 42px; border-bottom: 1px solid #eee;color: #aaa;text-align: center;font-size: 12px;">
+										<label name="checkall" class="ygcheck">
+											<input class="none car_btn1" type="checkbox" id="checkstart" name="startall"/>
+											<i class="skin"></i>
+											全选
+										</label>
+									</th>
+									<th style="font-weight: normal;width: 369px;height: 42px; border-bottom: 1px solid #eee;color: #aaa;text-align: center;font-size: 12px;">
+										<span style="padding-right: 25px;text-align: center;">商品名称</span>
+									</th>
+									<th style="font-weight: normal;">颜色尺码</th>
+									<th style="font-weight: normal;">单价</th>
+									<th style="font-weight: normal;">数量</th>
+									<th style="font-weight: normal;">小计(元)</th>
+									<th style="font-weight: normal;">操作</th>
+								</tr>
+							</thead>
+							<!--<tbody>
+								<tr class="first_tr">
+									<td class="first_td" conspan='7'>
+										<div class="first_car">
+											<div class="car_foot"></div>
+											<dl class="car_dl">
+												<input type="hidden" value="2016-10-26" id="idtime"/>
+												<dd class="fl rel colchek">
+													<input type="checkbox" />
+												</dd>
+												<dt class="con1 rel fl "></dt>
+												<dd class="con2 rel fl "></dd>
+												<dd class="con3 rel fl">
+													<div class="con3_box">
+														<p></p>
+														<p></p>
+													</div>
+												</dd>
+												<dd class="con4 rel fl">
+												</dd>
+												<dd class="con5 rel fl"></dd>
+												<dd class="con6 fl"></dd>
+												<dd class="con7 fl"></dd>
+											</dl>
+											<div class="car_foot"></div>
+										</div>
+									</td>
+								</tr>
+							</tbody>-->
+					    </table>
+					    <!--<ul class="car_ul">
+					    	<li class="car_li1"><input type="hidden"/>全选</li>
+					    	<li class="car_li2"></li>
+					    	<li class="car_li3"></li>
+					    </ul>
+					    <div class="car_ul_div"></div>-->
+					</div>
+				</div>
+				<div class="car_ft">
+						<a class="car_a"></a>
+						<div class="car_ft_div">
+							<a>清空购物车</a>
+						</div>
+						<div class="car_ft_right">
+							<span>总计（不含运费 ）</span>：<span style="color: #666;font-weight: bold;font-size: 16;">¥</span><strong style="font-size: 20px;font-weight: bold;color:red;">699</strong><a href="#" class="jiesuan" style="font-size: 23px;">去结算</a>
+						</div>
+					</div>
+					<div class="car_last">
+						<div style="width: 323px;height: 66px;float: right;">
+							<p style="font-size: 12px;line-height: 22px;text-align: right;color: #aaa;">购物保障：100%正品 10天退换货 10天补差价</p>
+							<p  style="font-size: 12px;line-height: 22px;text-align: right;color: #aaa;">优惠券/礼品卡在下一步使用</p>
+							<p  style="font-size: 12px;line-height: 22px;text-align: right;color: #aaa;">帮我们改进</p>
+						</div>
+					</div>
+					
+					<div style="width: 1190px;height: 298px;margin: 0 auto;border: 1px solid #ddd;">
+			        	<div style="width: 208px;height: 298px;float: left;border-right: 1px solid #ddd;">
+			        		<div style="height: 36px;border-bottom: 1px dashed #666;text-align: left;line-height: 30px;font-weight: bold;">最近浏览</div>
+			        		<ul style="list-style: none;">
+			        			<li style="width: 186px;height: 60px;padding: 10px;"><a href="#">
+			        				<div style="width: 60px;height: 60px;float: left;">
+			        					<img  src="img/shopp_foot1.jpg"/>
+			        				</div>
+			        				<div style="padding-left: 15px;float: left;width: 100px;height: 54px;">
+			        					<p style="font-size: 12px;color: #666;">adidas阿迪休闲20</p>
+			        					<p style="padding-top: 5px;color: #aaa;"><span style="font-size: 18px;line-height: 25px;color: red;">￥599</span><i style="font-style: normal;font-size: 18px;line-height: 25px;text-decoration: line-through;">￥599</i></p>
+			        				</div>
+			        			</a></li>
+			        			<li style="width: 186px;height: 60px;padding: 10px;"><a href="#">
+			        				<div style="width: 60px;height: 60px;float: left;">
+			        					<img  src="img/shopp_foot2_t.jpg"/>
+			        				</div>
+			        				<div style="padding-left: 15px;float: left;width: 100px;height: 54px;">
+			        					<p style="font-size: 12px;color: #666;">adidas阿迪休闲20</p>
+			        					<p style="padding-top: 5px;color: #aaa;"><span style="font-size: 18px;line-height: 25px;color: red;">￥499</span><i style="font-style: normal;font-size: 18px;line-height: 25px;text-decoration: line-through;">￥499</i></p>
+			        				</div>
+			        			</a></li>
+			        			<li style="width: 186px;height: 60px;padding: 10px;"><a href="#">
+			        				<div style="width: 60px;height: 60px;float: left;">
+			        					<img  src="img/shopp_foot3.jpg"/>
+			        				</div>
+			        				<div style="padding-left: 15px;float: left;width: 100px;height: 54px;">
+			        					<p style="font-size: 12px;color: #666;">CHUMS洽睦斯 201</p>
+			        					<p style="padding-top: 5px;color: #aaa;"><span style="font-size: 18px;line-height: 25px;color: red;">￥48</span><i style="font-style: normal;font-size: 18px;line-height: 25px;text-decoration: line-through;">￥48</i></p>
+			        				</div>
+			        			</a></li>
+			        		</ul>
+			        	</div>
+			        	<div style="width: 972px;height: 298px;float: left;position: relative;overflow: hidden;">
+			        		<p style="width: 122px;height: 21px;position: absolute;top: 5px;left: 2px;font-size: 14px;font-weight: bold;#666">根据浏览猜您喜欢</p>
+			        		<p style="width: 82px;height: 18px;position: absolute;top: 5px;right: 5px;font-size: 12px;">第<span id="shopp_span">1</span>页，共2页</p>
+			        		<a id="shopp_btn1" style="z-index: 99;display: block;height: 22px;width: 12px;font-weight: bold;cursor: pointer;position: absolute;top: 124px;left: 8px;font-size: 18px;"><</a>
+			        		<a id="shopp_btn2"  style="z-index: 99;display: block;height: 22px;width: 12px;font-weight: bold;cursor: pointer;position: absolute;top: 124px;right: 8px;font-size: 18px;">></a>
+			        		<div  style="width: 938px;height: 298px;margin: 0 auto;">
+			        			<ul id="shopp_ul" style="width: 4000px;height: 282px;list-style: none;position: absolute;">
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot4.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">鸿星尔克erke2016秋季新款女开衫带帽卫衣</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>179</strong></span><i style="color: #ddd;text-decoration: line-through;">￥339</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot5.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪休闲2016年新款男子休闲系列休闲鞋B74369</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>599</strong></span><i style="color: #ddd;text-decoration: line-through;">￥599</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot6.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪三叶草2016年新款女子三叶草系列休闲鞋S76148</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>479</strong></span><i style="color: #ddd;text-decoration: line-through;">￥639</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot7.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋B27395</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>579</strong></span><i style="color: #ddd;text-decoration: line-through;">￥739</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot8.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪休闲2016年新款女子休闲系列休闲鞋AW4237</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>564</strong></span><i style="color: #ddd;text-decoration: line-through;">￥759</i></p>
+			        			</li>
+			        			
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot9.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋AQ8333</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>679</strong></span><i style="color: #ddd;text-decoration: line-through;">￥739</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot10.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪达斯2016年新款男子场下休闲系列篮球鞋AW5087</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>599</strong></span><i style="color: #ddd;text-decoration: line-through;">￥599</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot11.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">PUMA彪马2016新款女子经典生活系列针织卫衣57226604</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>479</strong></span><i style="color: #ddd;text-decoration: line-through;">￥639</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot12.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋B27410</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>579</strong></span><i style="color: #ddd;text-decoration: line-through;">￥739</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot13.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪达斯2016年新款男子网球文化系列网球鞋S41953</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>564</strong></span><i style="color: #ddd;text-decoration: line-through;">￥759</i></p>
+			        			</li>
+			        		</ul>
+			        		</div>
+			        	</div>
+			        </div>
+					
+				<div class="car_lt">
+					<p>Copyright © 2011-2014 Yougou Technology Co., Ltd. <a>粤ICP备09070608号-4</a>增值电信业务经营许可证：<a>粤 B2-20090203</a></p>
+				</div>
+			</div>
+		</div>	
+	</body>
+</html>

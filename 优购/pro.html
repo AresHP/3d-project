@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/foot.css"/>
+		<style type="text/css">
+			.h_drop_box{display: none;}
+			.fixd{display: none;}
+			.body{width: 100%;height: 100%;background: #fff;}
+			.concent{background: #fff;width: 1190px;height: 100%;margin: 0 auto;overflow: hidden;}
+			.concent_head{width: 1190px;height: 22px;margin: 0 auto;margin: 3px 0;font-size: 12px;z-index: 99999;}
+		    .concent_head a:hover{color: red;}
+		    .concent_body1{overflow: hidden;width: 1190px;height: 605px;z-index: 2;margin: 0 auto;float: left;}
+		    .concent_img{float: left;width: 480px;height: 605px;position: relative;}
+		    .concent_img img{border: 1px solid #d1d3d4;}
+		    .concent_img .concent_a1{background: url(img/nav5.png) no-repeat 0 -93px;z-index: 10;position: absolute;right: 5px;top: 460px;width: 100px;}
+		    .concent_middle{position: relative;float: left;width: 490px;height: 513px;margin-left: 18px;z-index: 0;}
+		    .concent_middle h1{height: 28px;line-height: 28px;font-size: 16px;color: #666;}
+		    .concent_middle p a{text-decoration: underline;color: blue;cursor: pointer;}
+		    .maney{width: 490px;height: 49px;padding: 4px 0 20px 0;}
+		    .maney .maney_p{font-size: 24px ;color: red;}
+		    .maney_p i{font-style: normal;font-size: 32px;font-weight: bold;}
+		    .maney_p span{font-size: 12px;margin:  0 8px;color: #999;text-decoration: line-through;}
+		    .concent_middle .middle_p{height: 31px;line-height: 31px;}
+		    .middle_p span{font-size: 12px;float: left;width: 205px;height: 32px;display: block;}
+		    .middle_p i{height: 13px;line-height: 13px;margin: 8px 8px 0 0;text-align: left;width: 62px;display:inline-block;font-style: normal;background:  url(img/star.png) no-repeat 0 -100px;}
+		    .middle_p a{line-height: 31px;font-size: 12px;}
+		    .middle_p .middle_p_a{width: 48px;height: 31px;padding-left: 22px;float: right;color: #999;text-decoration: none;background: url(img/nav6.png) no-repeat 0 -180px;}
+		    .size{position: relative;width: 478px;height: 239px;padding: 22px 0 0 10px;border: 1px solid #f8f8f8;margin-top: 5px;}
+		    
+		    .size_p{height: 47px;font-size: 12px;color: #999;}
+		    .size_p span{width: 400px;margin-left: 2px;display: inline;}
+		    .size_p i{font-style: normal;display: inline-block;height: 12px;float: left;}
+		    .size_p2{width: 320px;height: 60px;margin-top: 10px;}
+		    .size_p2 i{color: #999999;font-style: normal;display: inline-block;height: 12px;float: left;font-size: 12px;}
+		    .size_p2 span{width: 285px;height: 60px;display: inline;}
+		    .size_p2 span a{position: relative;color: #999999;text-decoration: none;border: 1px solid #ececec;min-width: 24px;height: 18px;padding: 0 4px 0 4px;margin-bottom: 10px;display: inline-block;background: #fff;margin-right: 10px;text-align: center;cursor: pointer;}
+		    .size_p3{width: 308px;height: 30px;}
+		    .size_p3 span{float: right;}
+		    .size_p3 span a{color: #999;text-decoration: none;height: 20px;font-size: 12px;line-height: 23px;padding: 0 4px 0 20px;background: url(img/size2.png) no-repeat;}
+		    .size_p4{height: 25px;width: 478px;}
+		    .size_p4 .num1{cursor: pointer;line-height: 24px;color: #999;float: left;display: block;width: 24px;height: 25px;margin-right: 8px;font-size: 12px;}
+		    .size_p4 .num2 {cursor: pointer;color: #999;float: left;display: block;width: 56px;height: 22px;line-height: 25px;margin-right: 8px;}
+		    .size_p4 .num2_a{float: left;width: 11px;height: 11px; margin-top: 7px;line-height: 0;font-size: 0;background: url(img/size3.gif) no-repeat -11px 0;}
+		    .size_p4 .num2 i{float: left;padding-left: 3px;padding-right: 1px;width: 30px;position: relative;z-index: 10;}
+		    .size_p4 .num2 .i_a{color: #999;text-decoration: none;line-height: 15px;text-align: center;float: left;display: block;width: 25px;height: 13px;border: 1px solid #c1c3c4;margin: 3px 10px 0 0;}
+		    .size_p4 .num2_a2{float: left;width: 11px;height: 11px; margin-top: 7px;line-height: 0;font-size: 0;background: url(img/size3.gif) no-repeat -11px -11px;}
+		    .size_p4 .num3{line-height: 25px;float: left;width: 150px;height: 25px;margin-right: 8px;font-size: 12px;}
+		    .size_p4 .num3 a{color: red;font-size: 12px;text-decoration: none;}
+		    .size_p5{height: 20px;}
+		    .size_p6{position: relative;width: 478px;height: 37px;}
+		    .size_p6 .p6_a1{float:left;display: block;text-decoration: none;width: 121px;height: 35px;border: 1px solid red;line-height: 35px;text-align: center;font-weight: bold;font-size: 15px;color: red;background: #fff;margin-right: 10px;}
+		    .size_p6 .p6_a2{ cursor: pointer;float:left;display: block;text-decoration: none;width: 121px;height: 35px;border: 1px solid red;line-height: 35px;text-align: center;font-weight: bold;font-size: 15px;color: red;background: #fff;margin-right: 10px;}
+		    .size_erwei{width: 108px;height: 126px;position: absolute;top: 135px;right: 5px;}
+		    .size_erwei .erwei_p1{font-size: 12px;text-align: center;}
+		    .size_erwei .erwei_p{width: 108px;height: 90px;text-align: center;}
+		    .middle_p2{width: 470px;height: 18px;margin: 4px 10px;font-size: 12px;color:#999;}
+		    .middle_p2 .middle_p2_a{color: #000;text-decoration: none;}
+		    .middle_dl{width: 490px;height: 48px;overflow: hidden;}
+		    .middle_dl dt{width: 62px;float: left;color: #aaa;font-weight: bold;padding: 6px 0 6px 10px;font-size: 12px;}
+		    .middle_dl dd{width: 418px;height: 22px;padding: 5px 0 6px 0;float: left;}
+		    .middle_dl dd ul{list-style: none;overflow: hidden;}
+		    .middle_dl dd li{width: 88px;height: 22px;float: left;margin-left: 44px;}
+		    .middle_dl li a{width: 52px;height: 22px;padding-left:5px ;font-size: 12px;}
+		    .middle_dl span{width: 20px;height: 22px;display: block;float: left;}
+		    .middle_dl .dt_a1{background: url(img/size5.png) no-repeat 0 -210px;font-size: 12px;}
+		    .middle_dl .dt_a2{background: url(img/size5.png) no-repeat -22px -210px;font-size: 12px;}
+		    .middle_dl .dt_a3{background: url(img/size5.png) no-repeat -44px -210px;font-size: 12px;}
+		    
+		    .right_box{height: 520px;width: 140px;float: right;position: relative;}
+		    .concent_right{width: 140px;height: 520px;overflow: hidden;position: relative;}
+		    .concent_right .drop_ul{width: 140px;height:3132px;position: absolute;top: 0px;font-size: 12px;}
+		    .drop_ul li{width: 140px;height: 174px;}
+		    .drop_ul li img{width: 140px;height: 140px;}
+		    .right_btn{width: 90px;height: 27px;padding: 0 25px;list-style: none;position: absolute;top:520px ;left: 0;}
+		    .right_btn li{width: 27px;height: 27px;}
+		    .right_btn1{float: left;background: url(img/nav6.png) no-repeat -226px -157px;}
+		    .right_btn2{float: right;background: url(img/nav6.png) no-repeat -226px -186px;}
+		    .size_more{width: 490px;height: 78px;padding-top: 11px;}
+		    .size_more ul{width: 490px;list-style: none;overflow: hidden;}
+		    .size_more li{float: left;width: 69px;height: 66px;padding-top: 5px;}
+		    .size_more li img{width: 60px;height: 60px;padding: 2px;border: 1px solid #ddd;}
+		    .size_foot{width: 490px;height: 18px;}
+		    .size_foot span{display: block;float: left;width: 123px;height: 18px;font-size: 12px;}
+		    .size_foot_last{width: 124px;height: 18px;float: right;}
+		    .size_last_1{width: 62px;height: 18px;float: left;position: relative;}
+		    .size_last_1 i{display: block;height: 15px;width: 15px;margin: 3px 3px 0 0;float: left;background: url(img/nav6.png) no-repeat 0 -144px;}
+		    .size_last_1 a{font-size: 12px;color: #666;text-decoration: none;}
+		    .size_last_2{width: 62px;height: 18px;float: right;}
+		    .size_last_2 i{display: block;height: 15px;width: 15px;margin: 3px 3px 0 0;float: left;background: url(img/nav6.png) no-repeat 0 -167px;}
+		    .size_last_2 a{font-size: 12px;color: #666;text-decoration: none;}
+		    .size_dis{display: none;width: 226px;height:230px;border: 1px solid #d1d3d4;z-index: 99;position: absolute;top: -220px;left: 40px;}
+		    .dis_hd{height: 28px;padding: 0 5px;width: 216px;color: rgb(98, 98, 98);font-weight: bold;font-size: 14px;line-height: 28px;overflow: hidden;background: #999;}
+		    .size_dis ul{margin: 0px;padding: 5px 0px;background: #fff;overflow: auto;}
+		    .size_dis li{line-height: 28px;text-align: left;float: left; width: 100px;margin-left: 6px;height: 28px;padding: 2px;overflow: hidden;list-style: none;font-size: 12px;}
+		    .size_dis li a{width: 70px;height: 18px;font-size: 12px;padding: 5px 0 5px 28px;}
+		    .size_dis .size_a1{background: url(img/tubiao.png) no-repeat 4px -2439px;}
+		    .size_dis .size_a2{background: url(img/tubiao.png) no-repeat 4px -1607px;}
+		    .size_dis .size_a3{background: url(img/tubiao.png) no-repeat 4px -2647px;}
+		    .size_dis .size_a4{background: url(img/tubiao.png) no-repeat 4px -47px;}
+		    .size_dis .size_a5{background: url(img/tubiao.png) no-repeat 4px -99px;}
+		    .size_dis .size_a6{background: url(img/tubiao.png) no-repeat 4px -255px;}
+		    .size_dis .size_a7{background: url(img/tubiao.png) no-repeat 4px -359px;}
+		    .size_dis .size_a8{background: url(img/tubiao.png) no-repeat 4px -203px;}
+		    .size_dis .size_a9{background: url(img/tubiao.png) no-repeat 4px -463px;}
+		    .size_dis .size_a10{background: url(img/tubiao.png) no-repeat 4px -307px;}
+		    .size_dis .size_a11{background: url(img/tubiao.png) no-repeat 4px -151px;}
+		    .size_dis .size_a12{background: url(img/tubiao.png) no-repeat 4px -1711px;}
+		    
+		    .selection{background: url(img/nav6.png) no-repeat 29px -257px;}
+		    .size_more .color{border:1px solid red;}
+		    .concent .concent_middle a:hover{color: red;}
+		    .bk{background: #999999;border-radius:10px ;}
+		    
+		    
+		    .p_fenge{width: 1190px;height: 10px;margin: 0 auto;}
+		    .concent_tab{width: 1190px;height: 284px;margin: 0 auto;}
+		    .tab_bd{overflow: hidden;width: 1183px;height: 280px;padding: 0 2px 2px 2px;border: 1px solid #ddd;}
+		    .tab_concent{width: 1182px;height: 268px;padding-top: 12px;position: relative;}
+		    .tab_btn1{cursor: pointer;width: 12px;height: 22px;position: absolute;top: 124px;left: 5px;background: url(img/img.png) no-repeat 0 -71px;}
+		    .tab_btn2{cursor: pointer;width: 12px;height: 22px;position: absolute;top: 124px;right: 5px;background: url(img/img.png) no-repeat -13px -71px;}
+		    .tab_lb{overflow: hidden;width: 1140px;height: 295px;margin: 8px 0 0 25px;position: relative;}
+		    .tab_lb .tab_ul{width: 4536px;height: 270px;list-style: none;position: absolute;}
+		    .tab_lb li{width: 176px;height: 270px;padding: 0 5px 0 8px;float: left;}
+		    .tab_lb li a{font-size: 10px;color: #999999;text-decoration: none;}
+		    .tab_lb li span{color: red;font-size: 17px;font-weight: bold;}
+		    .tab_lb  .tab_i{font-style: normal;color: #999;font-size: 15px;text-decoration: line-through;}
+		    .tab_fenge{width: 1190px;height: 23px;line-height: 23px;font-size: 18px;text-align: left;margin: 0 auto;margin-top: 15px;}
+		    .shopping_more{width: 1190px;height: 100%;margin: 0 auto;overflow: hidden;}
+		    .shopp{width: 794px;height: 100%;float: left;}
+		    .shopp_p{width: 794px;background: #999999;margin-left:30px ;}
+		    .shopp2{float: right;width: 183px;}
+		    .shopp2 ul{list-style: none;border: 1px solid #999999;}
+		    .shopp2 li{width: 163px;height: 222px;padding: 20px 10px 0 10px;}
+		    .shopp2 .shopp2_p1{line-height: 23px;height: 23px;background: #ECECEC;color: #f60;}
+		    .shopp2 .shopp2_p2{font-size: 12px;color: #999;}
+		    .shopp2  span{color: red;font-size: 18px;font-weight: bold;line-height: 23px;}
+		    .shopp2_ul{margin-top: 30px;list-style: none;border: 1px solid #999999;width: 181px;}
+		    .shopp2_ul p {font-size: 14px;color:#999999 ;}
+		    .shopp2_hd {width: 183px;border-bottom: 1px solid #999;text-align: center;height: 40px;}
+		    .shopp2_ul .shopp2_foot{text-decoration: underline;font-size: 14px;width: 183px;border-top: 1px solid #999 ;text-align: left;line-height: 43px;}
+		    .shopp2_foot .shopp2_a{color: blue;}
+		    
+		    
+		    #dianping{display: none;}
+		    #li_bz{display: none;}
+		    #li_th{display: none;}
+		    #li_dc{display: none;}
+		    #li_by{display: none;}
+		    
+		   
+		    #lt{width: 970px;height: 31px;float: left;border-bottom: 2px solid #c01;}
+		    #fx{width: 970px;height: 31px;border-bottom: 2px solid #c01;position: fixed;top: 0;margin-top: 0;z-index: 999;display: none;}
+		    
+		    .fix{position: fixed;top: 0;margin-top: 0;z-index: 99;background: #fff;}
+		    #lt a{cursor: pointer;text-decoration: none;position: relative;margin-left: -1px;padding: 0 18px;font-size: 14px;display: block;float: left;height: 30px;line-height: 30px;border: 1px solid #ccc;border-bottom: 0;}
+		    .ared{color: #fff;background: #c01;}
+		    .size_p2 .ired{border:1px solid red;}
+		    .size_p6 .car{;display:block;width: 300px;height: 30px;text-align: center;line-height: 30px;font-size: 14px;border: 1px solid #FF0000;display: none;position: absolute;top: -30px;left: 0;background: #fff;}
+		    
+		    
+		    .size_p2 .size_i{display: none;bottom: 0;line-height: 18px;text-align: center;cursor: pointer;font-size: 12px;height: 12px;overflow: hidden;position: absolute;right: 0;text-indent: -9999em;width: 12px;background: url(img/nav6.png) no-repeat -2px -122px;}
+		    .pro_fixd{width: 1263px;height: 68px;position: fixed;bottom: 0;left: 0;overflow: hidden;}
+		    .pro_fixd1{width: 50%;height: 45px;position: absolute;top: 0;overflow: hidden;font-size: 12px;color: #666;}
+		    .pro_fixd2{width: 50%;height: 45px;position: absolute;top: 0;right:0 ;overflow: hidden;}
+		    .pro_fixd3{width: 1026px;margin: 0 auto;position: relative;background: #f00;}
+		    .pro_fixd4{background: #fff;width: 1043px;height: auto;border: 1px solid #ddd!important;padding: 11px 0 10px 19px;position: absolute;top: 0;left: -19px;z-index: 150;}
+		    .top{bottom: 10px;top: auto;display: block;left: auto;right: 0px;position: fixed;z-index: 151;}
+		    
+		    .biger{overflow: hidden;text-align: center;width: 500px;height: 500px;position: absolute;top: 0;right: 0;z-index: 90;}
+		    .biger img{position: absolute;}
+		    .smoll{display: none;width: 241px;height: 241px;background: rgba(255,255,255,0.5);position: absolute;}
+		    .null{width: 482px;height: 482px;position: absolute;top: 0;left: 0;z-index: 99;}
+		    
+		</style>
+	</head>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/yundong.js" ></script>
+	<script src="js/right.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('.h_drop h2').hover(function(){
+			$('.h_drop_box').show();
+		},function(){
+			$('.h_drop_box').hide();
+		})
+		$('.h_drop_box').mouseenter(function(){
+			$(this).show();
+		}).mouseleave(function(){
+			$(this).hide();
+		})
+		
+		var s=0;
+        $('.right_btn1').click(function(){
+        	s++;
+        	if(s<=5){
+        		$('.drop_ul').animate({top:-520*s});
+        	}
+        })
+        $('.right_btn2').click(function(){
+        	s--;
+        	if(s>=0){
+        		$('.drop_ul').animate({top:-520*s});
+        	}
+        	
+        })
+        
+        $('.size_more li').hover(function(){
+        	var index=$(this).index()+1;
+        	$(this).addClass('selection');
+        	$(this).children('img').addClass('color');
+        	$('.concent_img').children('img').attr('src','img/bog'+index+'.jpg');
+        	$('.biger').children('img').attr('src','img/biger'+index+'.jpg')
+        },function(){
+        	$(this).removeClass('selection');
+        	$(this).children('img').removeClass('color');
+//      	$('.concent_img').children('img').attr('src','img/shop1.jpg');
+        })
+        $('.size_last_1').hover(function(){
+        	$('.size_dis').show();
+        },function(){
+        	$('.size_dis').hide();
+        })
+        $('.size_dis li').hover(function(){
+        	$(this).addClass('bk');
+        },function(){
+        	$(this).removeClass('bk');
+        })
+        var c = 0;
+        $('.tab_btn1').click(function(){
+        	c++;
+        	if(c<=3){
+        		$('.tab_ul').stop().animate({left:-1134*c});
+        	}
+        })
+         $('.tab_btn2').click(function(){
+        	c--;
+        	if(c>=0){
+        		$('.tab_ul').stop().animate({left:-1134*c});
+        	}
+        })
+        
+         $('#shopp_btn1').click(function(){
+         	$('#shopp_ul').stop().animate({left:-940});
+         	$('#shopp_span').text(2);
+         	
+         })
+          $('#shopp_btn2').click(function(){
+         	$('#shopp_ul').stop().animate({left:20});
+         	$('#shopp_span').text(1);
+         })
+            var top = $('#lt').offset().top;
+          $('#lt a').click(function(){
+          	$('body').animate({scrollTop:top},100)
+          	$(this).addClass('ared').siblings('a').removeClass('ared');
+          })
+          
+          $('#lt_a1').click(function(){
+          	$('#dianping').hide();
+          	$('#li_by').hide();
+          	$('#li_dc').hide();
+          	$('#li_bz').hide();
+          	$('#li_th').hide();
+          	$('.shopp').show();
+          	$('#nav_box').show();
+          	$('#shopp1_box').show();
+          })
+          
+          $('#lt_a2').click(function(){
+          	$('#dianping').show();
+          	$('#li_by').hide();
+          	$('#li_dc').hide();
+          	$('#li_bz').hide();
+          	$('#li_th').hide();
+          	$('.shopp').hide();
+          	$('#nav_box').hide();
+          	$('#shopp1_box').hide();
+          })
+          $('#lt_a3').click(function(){
+          	$('#dianping').hide();
+          	$('#li_by').hide();
+          	$('#li_dc').hide();
+          	$('#li_bz').show();
+          	$('#li_th').hide();
+          	$('.shopp').hide();
+          	$('#nav_box').hide();
+          	$('#shopp1_box').hide();
+          })
+          $('#lt_a4').click(function(){
+          	$('#dianping').hide();
+          	$('#li_by').hide();
+          	$('#li_dc').hide();
+          	$('#li_bz').hide();
+          	$('#li_th').show();
+          	$('.shopp').hide();
+          	$('#nav_box').hide();
+          	$('#shopp1_box').hide();
+          })
+          $('#lt_a5').click(function(){
+          	$('#dianping').hide();
+          	$('#li_by').hide();
+          	$('#li_dc').show();
+          	$('#li_bz').hide();
+          	$('#li_th').hide();
+          	$('.shopp').hide();
+          	$('#nav_box').hide();
+          	$('#shopp1_box').hide();
+          })
+          $('#lt_a6').click(function(){
+          	$('#dianping').hide();
+          	$('#li_by').show();
+          	$('#li_dc').hide();
+          	$('#li_bz').hide();
+          	$('#li_th').hide();
+          	$('.shopp').hide();
+          	$('#nav_box').hide();
+          	$('#shopp1_box').hide();
+          })
+          
+          $(window).scroll(function(){
+          	if($(window).scrollTop()>top){
+          		$('#lt').stop().addClass('fix');
+          	}else{
+          		$('#lt').removeClass('fix');
+          	}
+          })
+          
+          $('#pro_btn').click(function(){
+          	$('.pro_fixd').hide();
+          })
+          
+          $('.top').click(function(){
+          	$('body').animate({scrollTop:0},100)
+          })
+          
+          var i = 0;
+		$('.num2_a').click(function(){
+			i--;
+			$('.i_a').text(i);
+		})
+		$('.num2_a2').click(function(){
+			i++;
+			$('.i_a').text(i);
+		})
+        
+          $('.size_p2 a').click(function(){
+          	$(this).children('i').show();
+          	$(this).siblings().children('i').hide();
+          	$(this).addClass('ired').siblings().removeClass('ired');
+          })
+      
+          var n = 0;
+          $('.p6_a2').click(function(){
+      		if($('.size_p2 a').hasClass('ired')){
+      			n++;
+      			$('.nav_s_1 span').text(n);
+          	}else{
+          		$('.car').show();
+          	}
+          	$.cookie("img",$('.size_more li').eq(0).find('img').attr('src'),{expires:7});
+          	
+          	$.cookie("name",$(".concent_middle h1").text(),{expires:7});
+          	$.cookie("money",$(".maney_p span").text(),{expires:7});
+          	$.cookie("color",$(".num3 a").text(),{expires:7});
+          	$.cookie("size",$(".size_p2 .ired").text(),{expires:7});
+          	$.cookie("num",$(".nav_s_1 span").text(),{expires:7});
+          	$.cookie("price",$(".maney_p i").text(),{expires:7});
+          })
+          $('#car_btn').click(function(){
+          	$('.car').hide();
+          })
+        $('.null').mousemove(function(event){
+        	$('.smoll').show();
+        	$('.biger').show();
+        	var x = event.offsetX - 120.5;
+        	var y = event.offsetY -120.5;
+        	if(x<0){
+        		x=0;
+        	}
+        	if(x>241){
+        		x=241;
+        	}
+        	if(y<0){
+        		y=0;
+        	}
+        	if(y>241){
+        		y=241;
+        	}
+        	
+        	$('.smoll').css({'top':y,'left':x});
+        	$('.biger img').css({'top':-2*y,'left':-2*x});
+        }).mouseleave(function(){
+        	$('.smoll').hide();
+        	$('.biger').hide();
+        })
+	})
+	</script>
+	<body>
+		<div class="yougou">
+			<div class="box">
+				<div class="head_box">
+					<div class="nav_1">
+						<div class="nav_1_1"><a href="" id="">时尚商城</a></div>
+						<div class="nav_1_4"><span class="sp1"><a>首尔站</a></span><span class="sp2"><a>Saoul Station</a></span></div>
+						<div class="nav_1_2"><a href=""><i class="phone"></i>手机优购<i class="tip"></i></a>
+							<div class="phone_con"><a href=""><img src="img/2.png"/></a>
+								<p><span><a href="">下载安装</a></span><strong><a href="">优购客户端</a></strong></p></div>
+						</div>
+						<div class="nav_1_3">
+							<div class="nav_ures">
+							<div class="nav_ures_1"><a href="register.html">登录</a></div>
+							<div class="nav_ures_2"><a href="register.html">注册</a></div>
+							</div>
+							<div class="my_show link_box"><a href="#" class="a1">我的优购</a><ul class="show_con"><li><a href="#">我的收藏</a></li></ul></div>
+							<div class="my_order link_box"><a href="#" class="a2">我的订单</a></div>
+							<div class="my_notice link_box"><a href="#" class="a3">公告</a>
+								<ul>
+									<li><a href="#">运动新风尚 新品5折起</a></li>
+									<li><a href="#">摩登男装 秋冬大促 全场1折起</a></li>
+									<li><a href="#">潮靴秀美腿 价比11.11</a></li>
+									<li><a href="#">女装初冬热促 爆款2折起</a></li>
+									<li><a href="#">库房发货时间调整说明</a></li>
+								</ul></div>
+							<div class="my_more link_box"><a href="#" class="a4">更多</a><ul><li><a href="#" class="at">收藏优购</a></li><li><a href="#">帮助</a></li></ul></div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="nav_body">
+					<div class="nav_body_1"><a href="#"><img src="img/1212121.jpg"/></a></div>
+					<div class="nav_body_2">
+						<div class="nav_body_2_1">
+							<div class="nav_k"></div>
+							<div class="nav_inp"><input type="text" name="keyword" maxlength="80"/></div>
+							<div class="nav_f"><a href="#"></a></div>
+						</div>
+						<div class="nav_body_2_2">
+							<a href="#" class="nav_a1">热销</a>|<a href="#">跑步乐</a>|<a href="#">乐福鞋</a>|<a href="#">徒步鞋</a>|<a href="#">衬衣</a>|<a href="#">T恤</a>|<a href="#">小白鞋</a>|<a href="#">冲锋衣</a>|<a href="#" class="nav_a2">秋款上新</a>|<a href="#">专柜同款</a> 
+						</div>
+					</div>
+					<div class="nav_body_3">
+						<div class="nav_body_3_1">
+							<div class="nav_s"></div>
+							<div class="nav_s_1"><a href="shopcar.html">&nbsp;&nbsp;&nbsp;&nbsp;购物车(<span>0</span>)件</a></div>
+							<div class="nav_s_2"></div>
+							<div class="nav_dis">您的购物车中还没有任何商品</div>
+						</div>
+						<div class="nav_body_3_2"><a href="#">百丽国际旗下购物网站</a></div>
+					</div>
+				</div>
+				
+				<div class="h_foot_box">
+					<div class="h_f_body">
+						<div class="h_drop">
+							<h2><a href="#">全部商品分类</a></h2>
+							<div class="h_drop_box">
+							    <ul class="h_drop_ul">
+							    	<li><div class="drop_dis1">
+							    		<div class="drop_con_1">
+							    			<a href="#"><img src="img/shoe1.jpg"/></a>
+							    			<p>
+							    				<a href="#">跑步鞋</a><a href="#">篮球鞋</a>
+							    				<a href="#">足球鞋</a><a href="#">帆布鞋</a>
+							    				<a href="#">户外鞋</a><a href="#">训练鞋</a>
+							    		        <a href="#">休闲鞋</a><a href="#">板鞋</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1">
+							    			<a href="#"><img src="img/shoe2.jpg"/></a>
+							    			<p>
+							    				<a href="#">夹克</a><a href="#">卫衣</a>
+							    				<a href="#">棉衣</a><a href="#">羽绒服</a>
+							    				<a href="#">紧身衣</a><a href="#">长裤</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1 drop_td">
+							    			<a href="#"><img src="img/shoe3.jpg"/></a>
+							    			<p class="drop_tp">
+							    				<a href="#">双肩包</a><a href="#">单肩包</a>
+							    				<a href="#">斜跨包</a><a href="#">袜子</a>
+							    				<a href="#">球类</a><a href="#">装备</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1">
+							    			<a href="#"><img src="img/shoe4.jpg"/></a>
+							    			<p>
+							    				<a href="#">耐克</a><a href="#">阿迪达斯</a>
+							    				<a href="#">三叶草</a><a href="#">匡威</a>
+							    				<a href="#">万斯</a><a href="#">NB</a>
+							    				<a href="#">悍马</a><a href="#">阿迪NEO</a>
+							    				<a href="#">李宁</a><a href="#">特步</a>
+							    			</p>
+							    		</div>
+							    	</div>
+							    		<div class="titt"><i></i><h3><a href="#">运动</a></h3></div><p id="drop_p"><a href="#">运动鞋</a><a href="#">夹克</a><a href="#">长裤</a><a href="#">运动包</a></p></li>
+							    	<li><div class="drop_dis1 drop_dis11" >
+							    		<div class="drop_con_1 drop_td">
+							    			<a href="#"><img src="img/out1.jpg"/></a>
+							    			<p>
+							    				<a href="#">哥伦比亚</a><a href="#">乐斯菲斯</a>
+							    				<a href="#">狼爪</a><a href="#">CTA</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1">
+							    			<a href="#"><img src="img/out2.jpg"/></a>
+							    			<p>
+							    				<a href="#">皮肤衣</a><a href="#">长袖T恤</a>
+							    				<a href="#">抓绒衣</a><a href="#">冲锋衣</a>
+							    				<a href="#">休闲裤</a><a href="#">冲锋裤</a>
+							    				<a href="#">羽绒服</a><a href="#">卫衣</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1">
+							    			<a href="#"><img src="img/out3.jpg"/></a>
+							    			<p class="drop_tp">
+							    				<a href="#">登山鞋</a><a href="#">徒步鞋</a>
+							    				<a href="#">溯溪鞋</a><a href="#">休闲鞋</a>
+							    				<a href="#">凉拖鞋</a><a href="#">越野鞋</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1">
+							    			<a href="#"><img src="img/out4.jpg"/></a>
+							    			<p>
+							    				<a href="#">户外包</a><a href="#">辅助工具</a>
+							    				<a href="#">配件</a>
+							    			</p>
+							    		</div>
+							    	</div>
+							    		<div class="titt titt_h1"><i></i><h3><a href="#">户外</a></h3></div><p id="drop_p"><a href="#">冲锋衣</a><a href="#">T恤</a><a href="#">皮肤衣</a><a href="#">休闲裤</a></p></li>
+							    	<li><div class="drop_dis1 drop_dis22">
+							    		<div class="drop_con_1">
+							    			<a href="#"><img src="img/shoes1.jpg"/></a>
+							    			<p>
+							    				<a href="#" style="color: red;">豆豆鞋</a><a href="#" style="color: red;">浅口鞋</a>
+							    				<a href="#">鱼嘴鞋</a><a href="#">防水台</a>
+							    				<a href="#">满帮鞋</a><a href="#">细高跟</a>
+							    		        <a href="#">洞洞鞋</a><a href="#">运动风</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1  drop_td">
+							    			<a href="#"><img src="img/shoes2.jpg"/></a>
+							    			<p>
+							    				<a href="#">百丽</a><a href="#">暇步士</a>
+							    				<a href="#">天美丽</a><a href="#">茵奈儿</a>
+							    				<a href="#">思加图</a><a href="#">百思图</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1">
+							    			<a href="#"><img src="img/shoes3.jpg"/></a>
+							    			<p class="drop_tp">
+							    				<a href="#" style="color: red;">秋季上新</a><a href="#" style="color: red;">秋季热卖</a>
+							    				<a href="#">镂空男鞋</a><a href="#">正装鞋</a>
+							    				<a href="#">帆布鞋</a><a href="#">豆豆鞋</a>
+							    				<a href="#">休闲男鞋</a><a href="#" style="color: red;">乐福鞋</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1">
+							    			<a href="#"><img src="img/shoes4.jpg"/></a>
+							    			<p>
+							    				<a href="#">天美意</a><a href="#">百丽</a>
+							    				<a href="#">森达</a><a href="#">拔佳</a>
+							    				<a href="#">暇步士</a><a href="#">她他</a>
+							    			</p>
+							    		</div>
+							    	</div>
+							    		<div class="titt titt_h2"><i></i><h3><a href="#">女鞋/男鞋</a></h3></div><p id="drop_p"><a href="#">浅口鞋</a><a href="#">秋季新品</a><a href="#">休闲男鞋</a></p></li>
+							    	<li><div class="drop_dis1 drop_dis33">
+							    		<div class="drop_con_1">
+							    			<a href="#"><img src="img/clothes1.jpg"/></a>
+							    			<p>
+							    				<a href="#">T恤</a><a href="#">衬衫</a>
+							    				<a href="#">卫衣</a><a href="#">针织衣</a>
+							    				<a href="#">夹克</a><a href="#">风衣</a>
+							    		        <a href="#">牛仔裤</a><a href="#">休闲裤</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1">
+							    			<a href="#"><img src="img/clothes2.jpg"/></a>
+							    			<p>
+							    				<a href="#">T恤</a><a href="#">衬衫</a>
+							    				<a href="#">针织衫</a><a href="#">连衣裙</a>
+							    				<a href="#">卫衣</a><a href="#">薄外套</a>
+							    				<a href="#">牛仔裤</a><a href="#">休闲裤</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1">
+							    			<a href="#"><img src="img/clothes3.jpg"/></a>
+							    			<p class="drop_tp">
+							    				<a href="#">CK Jeans</a><a href="#">LEE</a>
+							    				<a href="#">Wrangle</a><a href="#">ESPRIT</a>
+							    			</p>
+							    		</div>
+							    	</div>
+							    		<div class="titt titt_h3"><i></i><h3><a href="#">男装/女装</a></h3></div><p id="drop_p"><a href="#">卫衣</a><a href="#">T恤</a><a href="#">连衣裙</a><a href="#">牛仔裤</a></p></li>
+							    	<li><div class="drop_dis1 drop_dis44">
+							    		<div class="drop_con_1 drop_td">
+							    			<a href="#"><img src="img/yongshoe1.jpg"/></a>
+							    			<p>
+							    				<a href="#">阿迪</a><a href="#">迪士尼</a>
+							    				<a href="#">百丽</a><a href="#">小黄人</a>
+							    				<a href="#">彪马</a><a href="#">耐克</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1 drop_td">
+							    			<a href="#"><img src="img/yongshoe2.jpg"/></a>
+							    			<p>
+							    				<a href="#">跑步鞋</a><a href="#">学步鞋</a>
+							    				<a href="#">板鞋</a><a href="#">户外鞋</a>
+							    				<a href="#">足球鞋</a><a href="#">篮球鞋</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1 drop_td">
+							    			<a href="#"><img src="img/yongshoe3.jpg"/></a>
+							    			<p class="drop_tp">
+							    				<a href="#">儿童套装</a><a href="#">外套</a>
+							    				<a href="#">裤装</a><a href="#">T恤</a>
+							    				<a href="#">卫衣</a>
+							    			</p>
+							    		</div>
+							    		<div class="drop_con_1 drop_td">
+							    			<a href="#"><img src="img/yongshoe4.jpg"/></a>
+	    			<p>
+	    				<a href="#">帽子</a><a href="#">袜子</a>
+	    				<a href="#">背包</a>
+	    			</p>
+	    		</div>
+	    	</div>
+	    		<div class="titt titt_h4"><i></i><h3><a href="#">童装/童鞋/包配</a></h3></div><p id="drop_p"><a href="#">卫衣</a><a href="#">裤装</a><a href="#">跑步鞋</a><a href="#">书包</a></p></li>
+	    	<li><div class="drop_dis1 drop_dis55">
+	    		<div class="drop_con_1 drop_td">
+	    			<a href="#"><img src="img/big1.jpg"/></a>
+	    			<p>
+	    				<a href="#">手提/手包</a><a href="#">单肩/斜跨</a>
+	    				<a href="#">双肩</a><a href="#">钱包</a>
+	    			</p>
+	    		</div>
+	    		<div class="drop_con_1 drop_td">
+	    			<a href="#"><img src="img/big2.jpg"/></a>
+	    			<p class="drop_tp">
+	    				<a href="#">单肩/斜跨</a><a href="#">手提/手包</a>
+	    				<a href="#">双肩</a><a href="#">钱包</a>
+	    			</p>
+	    		</div>
+							    		<div class="drop_con_1 drop_td">
+							    			<a href="#"><img src="img/big3.jpg"/></a>
+							    			<p>
+							    				<a href="#">项链</a><a href="#">项坠/吊坠</a>
+							    				<a href="#">戒指/指环</a><a href="#">手链/手镯</a>
+							    			</p>
+							    		</div>
+							    	</div>
+							    		<div class="titt titt_h5"><i></i><h3><a href="#">精包/配饰</a></h3></div><p id="drop_p"><a href="#">女包</a><a href="#">男包</a><a href="#">配饰品</a></p></li>
+							    	<li><div class="titt titt_h6"><i></i><h3><a href="#">首尔站</a></h3></div><p id="drop_p"><a href="#">海外直邮</a><a href="#">搭配购</a></p></li>
+							    </ul>
+						    </div>
+						</div>
+						<ul class="h_ul">
+							<li><a href="#">运动馆</a></li>
+							<li><a href="#">户外馆</a></li>
+							<li><a href="#">鞋靴馆</a></li>
+							<li><a href="#">服装馆</a></li>
+							<li><a href="#">母婴童</a></li>
+							<li><a href="#">首尔站</a></li>
+							<li class="h_li1"><a href="#">聚优购</a></li>
+							<li class="h_li2"><a href="#">秒杀</a></li>
+							<li class="h_li3"><i class="tip_con"></i><a href="#">分享购</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	        <div class="body">
+			    <div class="concent">
+			    	<div class="concent_head">您当前的位置：<a href="#">首页</a> > <a href="#">户外运动</a> > <a href="#">运动</a> > <a href="#">运动鞋/休闲鞋</a> > <a href="#">休闲鞋</a> > <a href="#">休闲鞋</a> >adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋B27395</div>
+			        <div class="concent_body1">
+			        	<div class="concent_img"><img src="img/shop1.jpg"/><a href="#" class="concent_a1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			        		<div class="smoll"></div>
+			        		<div class="null"></div>
+			        		<div class="size_more">
+			        			<ul>
+			        		       <li><img src="img/smoll1.jpg"/></li>
+			        		       <li><img src="img/smoll2.jpg"/></li>
+			        		       <li><img src="img/smoll3.jpg"/></li>
+			        		       <li><img src="img/smoll4.jpg"/></li>
+			        		       <li><img src="img/smoll5.jpg"/></li>
+			        		       <li><img src="img/smoll6.jpg"/></li>
+			        		       <li><img src="img/smoll7.jpg"/></li>
+			        			</ul>
+			        		</div>
+			        		<div class="size_foot"><span>商品编号：100492978</span><div class="size_foot_last"><div class="size_last_1"><i></i><a href="#">分享</a><div class="size_dis"><div class="dis_hd">分享到</div>
+			        		<ul>
+			        			<li><a href="#" class="size_a1">一键分享</a></li>
+			        			<li><a href="#" class="size_a2">微信</a></li>
+			        			<li><a href="#" class="size_a3">QQ</a></li>
+			        			<li><a href="#" class="size_a4">QQ空间</a></li>
+			        			<li><a href="#" class="size_a5">新浪微博</a></li>
+			        			<li><a href="#" class="size_a6">腾讯微博</a></li>
+			        			<li><a href="#" class="size_a7">腾讯朋友</a></li>
+			        			<li><a href="#" class="size_a8">人人网</a></li>
+			        			<li><a href="#" class="size_a9">豆瓣网</a></li>
+			        			<li><a href="#" class="size_a10">开心网</a></li>
+			        			<li><a href="#" class="size_a11">百度首页</a></li>
+			        			<li><a href="#" class="size_a12">美丽说</a></li>
+			        		</ul>
+			        		</div></div><div class="size_last_2"><i></i><a href="#">收藏</a></div></div></div>
+			        	</div>
+			            <div class="concent_middle">
+			            	<div class="biger"><img src="img/biger1.jpg"/></div>
+			        	    <h1>adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋B27395</h1>
+			        	    <p><a>更多adidas Originals/阿迪三叶草商品>></a></p>
+			        	    <div class="maney">
+			        	    	<p class="maney_p">￥<i>699</i><span>￥699</span></p>
+			        	    </div>
+			        	    <p class="middle_p"><span>商品评分： <i></i><a href="#">已有0人点评</a></span><a href="#" class="middle_p_a">在线咨询</a></p>
+			        	    <div class="size">
+			        	    	<p class="size_p"><i>颜色</i><span><a><img src="img/size1.jpg"/></a></span></p>
+			        	    	<p class="size_p2"><i>尺码</i> <span>
+			        	    		    <a >39<i class="size_i"></i></a><a>40<i class="size_i"></i></a><a>40.5<i class="size_i"></i></a><a>41<i class="size_i"></i></a>
+			        	    		    <a>41.5<i class="size_i"></i></a><a>42<i class="size_i"></i></a><a>42.5<i class="size_i"></i></a><a>43<i class="size_i"></i></a>
+			        	    		    
+			        	    	    </span>
+			        	    	</p>
+			        	    	<p class="size_p3"><span><a href="#">尺码对照表>></a></span></p>
+			        	    	<p class="size_p4"><span class="num1">数量</span><span class="num2"><a class="num2_a"></a><i><a class="i_a">0</a></i><a class="num2_a2"></a></span><span class="num3">已选择<a href="#">浅栗色/亮白</a></span></p>
+			        	    	<p class="size_p5"></p>
+			        	    	<p class="size_p6">
+			        	    		<a href="#" class="p6_a1">立即购买</a><a class="p6_a2">加入购物车</a>
+			        	    		<a class="car">请选择尺码
+			        	    		<i id="car_btn" style="position: absolute;width: 14px;height: 14px;right: 5px;top: 5px;cursor: pointer;font-style: normal;background: url(img/pro_foot.gif) no-repeat -67px -52px;"></i>
+			        	    		</a>
+			        	    	</p>
+			        	    	<div class="size_erwei">
+			        	    		<p class="erwei_p1">下载优购客户端</p>
+			        	    		<p class="erwei_p"><img src="img/size4.png" style="height: 90px;width: 90px;"/></p>
+			        	    		<p class="erwei_p1">更多手机专享优惠</p>
+			        	    	</div>
+			        	    </div>
+			        	    <p class="middle_p2">本商品由<a href="#" class="middle_p2_a">YouGou优购</a>直接发货</p>
+			        	    <dl class="middle_dl">
+			        	    	<dt>服务承诺</dt>
+			        	    	<dd>
+			        	    		<ul>
+			        	    			<li><span class="dt_a1"></span><a href="#">正品保证</a></li>
+			        	    			<li><span class="dt_a2"></span><a href="#">十天退换货</a></li>
+			        	    			<li><span class="dt_a3"></span><a href="#">十天补差价</a></li>
+			        	    		</ul>
+			        	    	</dd>
+			        	    </dl>
+			            </div>
+			            <div class="right_box">
+				            <div class="concent_right">
+				            	<ul class="drop_ul"></ul>
+				            </div>
+				            <ul class="right_btn">
+				            	<li class="right_btn1"></li>
+				            	<li class="right_btn2"></li>
+				            </ul>
+			            </div>
+			        </div>
+
+			    </div>
+			     <p class="p_fenge"></p>
+			        <div class="concent_tab">
+			        	<div class="tab_bd">
+			        		<div class="tab_concent">
+			        			<a class="tab_btn1"></a>
+			        			<a  class="tab_btn2"></a>
+			        			<div class="tab_lb">
+			        				<ul class="tab_ul">
+			        					<li><a href="#"><img src="img/tab1.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋F37315</a><span>￥318</span><i class="tab_i">￥509</i></li>
+			        					<li><a href="#"><img src="img/tab2.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋S75873</a><span>￥320</span><i class="tab_i">￥529</i></li>
+			        					<li><a href="#"><img src="img/tab3.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋S80029</a><span>￥358</span><i class="tab_i">￥569</i></li>
+			        					<li><a href="#"><img src="img/tab4.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款女子三叶草系列休闲鞋BB1434</a><span>￥357</span><i class="tab_i">￥545</i></li>
+			        					<li><a href="#"><img src="img/tab5.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款男子三叶草系列休闲鞋S79198</a><span>￥418</span><i class="tab_i">￥609</i></li>
+			        					<li><a href="#"><img src="img/tab6.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款STSMITH中性休闲鞋M20325</a><span>￥458</span><i class="tab_i">￥759</i></li>
+			        					<li><a href="#"><img src="img/tab7.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款女子Superstar系列鞋S337</a><span>￥438</span><i class="tab_i">￥509</i></li>
+			        					<li><a href="#"><img src="img/tab8.jpg"/></a><a href="#">adidas阿迪三叶草2016新款女子三叶草系列休闲鞋AQ31754</a><span>￥350</span><i class="tab_i">￥629</i></li>
+			        					<li><a href="#"><img src="img/tab9.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款女子三叶草系列休闲鞋S32158</a><span>￥388</span><i class="tab_i">￥769</i></li>
+			        					<li><a href="#"><img src="img/tab10.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款女子三叶草系列休闲鞋S75982</a><span>￥457</span><i class="tab_i">￥585</i></li>
+			        					<li><a href="#"><img src="img/tab11.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋F37407</a><span>￥458</span><i class="tab_i">￥689</i></li>
+			        					<li><a href="#"><img src="img/tab12.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款男子三叶草系列休闲鞋S75023</a><span>￥668</span><i class="tab_i">￥959</i></li>
+			        					<li><a href="#"><img src="img/tab6.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款STSMITH中性休闲鞋M20325</a><span>￥458</span><i class="tab_i">￥759</i></li>
+			        					<li><a href="#"><img src="img/tab7.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款女子Superstar系列鞋S337</a><span>￥438</span><i class="tab_i">￥509</i></li>
+			        					<li><a href="#"><img src="img/tab8.jpg"/></a><a href="#">adidas阿迪三叶草2016新款女子三叶草系列休闲鞋AQ31754</a><span>￥350</span><i class="tab_i">￥629</i></li>
+			        					<li><a href="#"><img src="img/tab1.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋F37315</a><span>￥318</span><i class="tab_i">￥509</i></li>
+			        					<li><a href="#"><img src="img/tab2.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋S75873</a><span>￥320</span><i class="tab_i">￥529</i></li>
+			        					<li><a href="#"><img src="img/tab3.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋S80029</a><span>￥358</span><i class="tab_i">￥569</i></li>
+			        					<li><a href="#"><img src="img/tab4.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款女子三叶草系列休闲鞋BB1434</a><span>￥357</span><i class="tab_i">￥545</i></li>
+			        					<li><a href="#"><img src="img/tab5.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款男子三叶草系列休闲鞋S79198</a><span>￥418</span><i class="tab_i">￥609</i></li>
+			        					<li><a href="#"><img src="img/tab6.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款STSMITH中性休闲鞋M20325</a><span>￥458</span><i class="tab_i">￥759</i></li>
+			        					<li><a href="#"><img src="img/tab10.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款女子三叶草系列休闲鞋S75982</a><span>￥457</span><i class="tab_i">￥585</i></li>
+			        					<li><a href="#"><img src="img/tab11.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋F37407</a><span>￥458</span><i class="tab_i">￥689</i></li>
+			        					<li><a href="#"><img src="img/tab12.jpg"/></a><a href="#">adidas阿迪三叶草2016年新款男子三叶草系列休闲鞋S75023</a><span>￥668</span><i class="tab_i">￥959</i></li>
+			        				</ul>
+			        			</div>
+			        		</div>
+			        	</div>
+			        </div>
+			        <div class="tab_fenge"></div>
+			        
+			        <div class="shopping_more">
+			        	<div id="lt" >
+			        		<a id="lt_a1"  class="ared">商品详情</a><a  id="lt_a2">商品点评</a><a  id="lt_a3">购物保障</a><a  id="lt_a4">退换货无忧</a><a  id="lt_a5">支付与配送</a><a  id="lt_a6">如何保养</a>
+			        	</div>
+			        	<div id="nav_box" style="width: 970px;height: 100%;float: left;text-align: center;margin-bottom: 20px;">
+			        		<table style="width: 788px;height: 100px;border-collapse: separate;vertical-align: middle;margin: 0 auto;">
+			        			<tr style="background: #ccc;"><td style="margin-right: 8px;">色系：</td><td style="margin-right: 8px;">红色</td><td style="margin-right: 8px;">鞋帮：</td><td style="margin-right: 8px;">中帮</td></tr>
+			        			<tr style="background: #ccc;"><td style="margin-right: 8px;">适用人群：</td><td style="margin-right: 8px;">女子男子</td><td style="margin-right: 8px;">鞋底材质：</td><td style="margin-right: 8px;">其他</td></tr>
+			        			<tr style="background: #ccc;"><td style="margin-right: 8px;">性别：</td><td style="margin-right: 8px;">中性</td><td style="margin-right: 8px;">品牌系列：</td><td style="margin-right: 8px;">三叶草系列</td></tr>
+			        			<tr style="background: #ccc;"><td style="margin-right: 8px;">鞋面材质：</td><td style="margin-right: 8px;">其他</td><td style="margin-right: 8px;">运动项目：</td><td style="margin-right: 8px;">休闲</td></tr>
+			        			<tr style="background: #ccc;"><td style="margin-right: 8px;">闭合方式：</td><td style="margin-right: 8px;">前系带</td><td style="margin-right: 8px;">风格：</td><td style="margin-right: 8px;">休闲</td></tr>
+			        		</table>
+			        	</div>
+			        	<div class="shopp">
+			                <p class="shopp_p">
+			                	<img src="img/shopp1.jpg" />
+			                	<img src="img/shopp2.jpg" />
+			                	<img src="img/shopp3.jpg" />
+			                	<img src="img/shopp4.jpg" />
+			                	<img src="img/shopp5.jpg" />
+			                </p>
+			        	</div>
+			        	<div class="shopp2">
+			        		<p class="shopp2_p1">其它运动品牌</p>
+			        		<ul>
+			        			<li><img src="img/shopp6.jpg"/><p class="shopp2_p2">鸿星尔克erke2016秋季新款女套头带帽卫衣</p><span>￥230</span></li>
+			        			<li><img src="img/shopp7.jpg"/><p class="shopp2_p2">鸿星尔克erke2016秋季新款女套头带帽卫衣</p><span>￥260</span></li>
+			        			<li><img src="img/shopp8.jpg"/><p class="shopp2_p2">鸿星尔克erke2016秋季新款女套头带帽卫衣</p><span>￥310</span></li>
+			        			<li><img src="img/shopp9.jpg"/><p class="shopp2_p2">adidas阿迪三叶草2016年新款女子系列休闲鞋BB1434</p><span>￥570</span></li>
+			        			<li><img src="img/shopp10.jpg"/><p class="shopp2_p2">adidas阿迪三叶草2016年新款女子系列休闲鞋BB1434</p><span>￥530</span></li>
+			        			<li><img src="img/shopp11.jpg"/><p class="shopp2_p2">adidas阿迪三叶草2016年新款女子系列休闲鞋BB1434</p><span>￥730</span></li>
+			        			<li><img src="img/shopp12.jpg"/><p class="shopp2_p2">adidas阿迪三叶草2016年新款女子系列休闲鞋BB1434</p><span>￥680</span></li>
+			        		</ul>
+			        		<div class="shopp2_ul">
+			        			<div class="shopp2_hd"><img src="img/shopp13.jpg"/></div>
+			        			<p> &nbsp;三叶草从1972年开始成为阿迪达斯的标志,当时所有阿迪达斯产品都使用这一标志。三叶草的形状如同地球立体三维的平面展开,很像一张世界地图,它象征着三条纹延伸至全世界。但从1996年开始,三叶草标志被专门使用于经典系列Original产品。经典系列是选择阿迪达斯历史上最好的产品作为蓝本,在对其面料和款式进行略微修改之后重新发布的。整个系列更趋时尚化,产品包括鞋、服装及包袋等附件。关键词：2016新款Adidas三叶草休闲鞋、Adidas三叶草运动鞋、阿迪三叶草板鞋、阿迪三叶草运动服、阿迪三叶草运动包——【阿迪三叶草官网专卖店】adidas阿迪三叶草官方旗舰店_2016新款阿迪三叶草休闲鞋|运动服|运动鞋|童鞋专柜正品折扣店-优购网</p>
+			        		    <div class="shopp2_foot"><a href="#" class="shopp2_a">更多阿迪三叶草商品>></a></div>
+			        		</div>
+			        	</div>
+			        	<div id="shopp1_box" style="float: left;width: 100%;height: 100%;">
+				        <div style="margin: 0 auto;float: left;width: 794px;height: 27px;margin-top: 16px;border-bottom: 3px solid #000;font-size: 14px;font-weight: bold;">实拍线下专卖店</div>
+	                    <div style="margin: 0 auto;float: left;text-align: center;width: 794px;"><img src="img/shopp14.jpg"/></div>
+	                    <div style="width: 815px;height: 50px;float: left;padding: 12px 80px;margin-top: 5px;background: #f3f2f2;">
+	                    	<p style="height: 25px;line-height: 25px;font-size: 14px;color: #666;">￥650 &nbsp;&nbsp;即销售价或因开展不同的优惠活动而设定的即时售价</p>
+	                    	<p style="height: 25px;line-height: 25px;font-size: 14px;color: #666;"><span style="text-decoration: line-through;">￥650</span> &nbsp;&nbsp;品牌商建议零售价或牌价</p>
+	                    </div>
+	                    <div style="float: left;width: 970px;height: 170px;">
+	                    	<div style="width: 970px;height: 30px;margin: 20px 0 2px 0;border-bottom: 2px solid red;text-align: center;line-height: 32px;"><h3 style="padding: 0 25px;float: left;background:red;color: #fff;display: block;height: 32px;text-align: center;line-height: 32px;">商品点评</h3><p style="float: right;font-size: 14px;color: #666;">购买过该商品的用户才能进行评论</p></div>
+	                        <div style="width: 794px;height: 138px;margin: 0 auto;">
+	                        	<div style="width: 794px;height: 120px;padding-top: 20px;">
+	                        		<p style="font-size: 14px;color: #999999;">该商品暂无点评</p>
+	                        		<p style="font-size: 14px;color: #666;">赶快来发表第一个点评吧！<a href="#" style="display: inline-block;height: 22px;width: 78px;background: url(img/nav7.png) no-repeat -675px 0;font-size: 14px;color: #fff;text-align: center;">我要写评价</a></p>
+	                        		<p style="margin-top: 40px;"><a href="#" style="color: blue;text-decoration: underline;">查看更多评价>></a></p>
+	                        	</div>
+	                        </div>
+	                    </div>
+	                    <div  style="width: 970px;float: left;height: 100%;">
+	                        	<div style="width: 970px;height: 30px;margin: 20px 0 2px 0;border-bottom: 2px solid red;text-align: center;line-height: 32px;"><h3 style="padding: 0 25px;float: left;background:red;color: #fff;display: block;height: 32px;text-align: center;line-height: 32px;">购物保障</h3></div>
+	                        	<div  style="width: 794px;margin: 0 auto;height: 2936px;">
+	                        		<ul style="width: 762px;padding: 0 16px;list-style: none;height: 1210px;">
+	                        			<li style="width: 679px;height: 138px;padding: 40px 10px 0 73px;text-align: left;position: relative;">
+	                        				<span style="position: absolute;top: 35px;left: 10px;display: block;width: 47px;height: 49px;background: url(img/nav5.png) no-repeat -154px 0;"></span>
+	                        				<h4 style="font-size: 22px;color: #666;">正品保障</h4>
+	                        				<p style="color: #8f8f8f;font-size: 14px;padding: 3px 0 10px;line-height: 25px;">诚信为本，优购销售的商品均为品牌商直接供货</p>
+	                        				<p style="font-size: 12px;">优购为百丽集团旗下时尚及运动鞋服类购物网站，始终坚持优质正品的品牌理念，以用户体验、服务至上为宗旨，依托投资方百丽国际强大的供应链、资金及品牌优势，经营范围涉及"男鞋、女鞋、男装、女装、运动、户外、童鞋、箱包" 八大品类，涵盖百丽、天美意、莱尔斯丹、fed、哈森、森达、季候风、OZZO、利郎、耐克、阿迪达斯、CAT、哥伦比亚等数百个知名品牌，数十万款商品。</p>
+	                        			</li>
+	                        			<li  style="width: 762px;height: 344px;padding: 40px 10px 0 73px;text-align: left;position: relative;">
+	                        				<span style="position: absolute;top: 35px;left: 10px;display: block;width: 47px;height: 49px;background: url(img/nav5.png) no-repeat -201px 0;"></span>
+	                        				<h4 style="font-size: 22px;color: #666;">10天退换货服务</h4>
+	                        				<p style="color: #8f8f8f;font-size: 14px;padding: 3px 0 10px;line-height: 25px;">优购为您提供10天（自签收之日起）退换货服务，让您购物无风险</p>
+	                        			    <table style="width: 678px;height: 260px;border-collapse: collapse;border: 1px solid #d9d9d9;border-bottom: 0; text-align: center;">
+	                        			    	<thead style="width: 675px;height: 51px;background: #aaa;font-size: 12px;font-weight: bold;"><tr><th style="width: 328px;height: 40px;padding: 5px;">以下情况可办理退换货</th><th>以下情况不可办理退换货</th></tr></thead>
+	                        			        <tbody>
+	                        			        	<tr style="border-bottom: 1px solid #d9d9d9;font-size: 14px;line-height: 30px;"><td style="height: 30px;">商品不满意可退换</td><td style="border-left:1px solid #d9d9d9 ;height: 30px;">超过10天有效期不可退换</td></tr>
+	                        			        	<tr style="border-bottom: 1px solid #d9d9d9;font-size: 14px;"><td>尺码不适合可退换</td><td style="border-left:1px solid #d9d9d9 ;">商品无法二次销售不可退换</td></tr>
+	                        			        	<tr style="border-bottom: 1px solid #d9d9d9;font-size: 14px;"><td>质量问题可退换</td><td style="border-left:1px solid #d9d9d9 ;">鞋盒损坏、粘绑胶带不可退换</td></tr>
+	                        			        	<tr style="border-bottom: 1px solid #d9d9d9;font-size: 14px;"><td>配送错误可退换</td><td style="border-left:1px solid #d9d9d9 ;">商品相关附件丢失不可退换</td></tr>
+	                        			        </tbody>
+	                        			    </table>
+	                        			    <p style="font-size: 12px;"><span style="color: red;">温馨提示：</span>退换货时请将购物凭证随货寄回，并填写相关信息<a href="#" style="float: right;margin-right: 100px;color: blue;">点击查看售后服务详细说明>></a></p>
+	                        			</li>
+	                        			<li style="width: 760px;height: 460px;padding: 40px 10px 0 73px;text-align: left;position: relative;">
+	                        				<span style="position: absolute;top: 35px;left: 10px;display: block;width: 47px;height: 49px;background: url(img/nav5.png) no-repeat -154px -49px;"></span>
+	                        				<h4 style="font-size: 22px;color: #666;">10天掉价补差价</h4>
+	                        				<p style="color: #8f8f8f;font-size: 14px;padding: 3px 0 10px;line-height: 25px;">优购网商品售价（优购价）因季节等因素发生变化时，将给予顾客10天补差价</p>
+	                        			    <p style="color: #8f8f8f;font-size: 14px;line-height: 25px;">即：在订单签收起10日内，如订单内商品降价<span style="color: red;">(优购价降价)</span>，您可以通过售后热线、在线客服、客服邮箱等方式申请价保，我们会在接到申请后，将您申请时的价格与您订购商品的价格差以礼品卡的形式予以返还。</p>
+	                        			    <p style="font-size: 12px;"><span style="color: red;">温馨提示：</span>退符合补差价条件的同款商品10天内仅享受一次补差价</p>
+	                        			    <div style="width: 679px;175px;padding-top: 10px;">
+	                        			    	<h5 style="font-size: 14px;line-height: 22px;color:#666;">价保原则如下：</h5>
+	                        			    	<table style="color: #9B9B9B;width: 679px;height: 153px;border-collapse: collapse;border: 1px solid #d9d9d9">
+	                        			    		<thead style="background: #CCCCCC;"><tr style="font-size: 12px;"><td>什么时候申请？</td><td>怎么申请？</td><td>怎么返还？</td><td>补差礼品卡使用规则</td></tr></thead>
+	                        			    		<tbody>
+	                        			    			<tr style="font-size: 12px;"><td style="border-right: 1px solid #ccc;">签收之日起10天内</td><td style="border-right: 1px solid #ccc;"><ul style="list-style: none;">
+	                        			    				<li>1、联系售后热线申请</li><li>2、联系在线客服申请</li><li><a href="#" style="font-size: 12px;">在线咨询</a></li>3、发送客服邮箱申请<li></li>
+	                        			    			</ul></td><td style="border-right: 1px solid #ccc;">差价以礼品卡的形式予以返还</td><td style="border-right: 1px solid #ccc;"><ul style="list-style: none;">
+	                        			    				<li>1、礼品卡通常不受网站促销活动限制，可与优惠券同时使用（每张订单只能使用一张优惠券和一张礼品卡）</li>
+	                        			    				<li>2、已享受补差的商品如发生退货，我司将作废礼品卡或直接从商品退款中扣除同等礼品卡金额</li>
+	                        			    				<li>注：此规则从2012年12月5日起执行</li>
+	                        			    			</ul></td></tr>
+	                        			    		</tbody>
+	                        			    	</table>
+	                        			    </div>
+	                        			    <div style="width: 679px;height: 182px;padding-top: 10px;">
+	                        			    	<h5 style="font-size: 14px;line-height: 22px;font-weight: bold;color: #666;">不享受十天补差声明：</h5>
+	                        			    	<ul style="list-style: none;font-size: 12px;color: #9B9B9B;">
+	                        			    		<li>1、换货商品不享受十天补差价；</li>
+	                        			    		<li>2、秒杀、团购商品不享受十天补差；</li>
+	                        			    		<li>3、差价在5元或以下的不享受十天补差；</li>
+	                        			    		<li>4、购买时包含赠品的商品不享受十天补差；</li>
+	                        			    		<li>5、有售馨、断码标识、已下架的商品不享受十天补差价；</li>
+	                        			    		<li>6、如订单使用优惠券，申请退差后达不到优惠券使用条件的不享受十天补差；</li>
+	                        			    		<li>7、涉及全场活动，如：套餐组合、加价换购、满减、多件折等促销活动不享受十天补差；</li>
+	                        			    		<li>8、在线支付订单的部分商品补差剩余金额不满99元，按照订单99元免运费条件，需扣除15元运费计算补差。</li>
+	                        			    	</ul>
+	                        			    </div>
+	                        			</li>
+	                        			<li style="width: 679px;height: 108px;padding: 40px 10px 0 73px;text-align: left;position: relative;">
+	                        				<span style="position: absolute;top: 35px;left: 10px;display: block;width: 47px;height: 49px;background: url(img/nav5.png) no-repeat -201px -49px;"></span>
+	                        				<h4 style="font-size: 22px;color: #666;">7×24小时贴心客服</h4>
+	                        				<p style="color: #8f8f8f;font-size: 14px;padding: 3px 0 10px;line-height: 25px;">优购客服中心为您提供<span style="color: red;">7×24小时全年无休</span>的优质服务<br />
+	                        				如果您有任何问题，欢迎与我们联系。<br />客服邮箱：<span style="color: blue;">service@yougou.com</span>
+	                        				</p>
+	                        				
+	                        			</li>
+	                        		</ul>
+	                        		<dl style="padding: 0 25px 40px;width: 740px;height: 829px;">
+	                        			<dt style="border-bottom: 1px solid #ddd;height: 30px;line-height: 30px;font-size: 14px;font-weight: bold;margin-top: 30px;">公司展示</dt>
+	                        			<dd style="margin-top: 15px;font-size: 12px;width:744px;height: 240px;">
+	                        				<img src="img/shopp15.jpg"/>
+	                        			</dd>
+	                        			<dt style="border-bottom: 1px solid #ddd;height: 30px;line-height: 30px;font-size: 14px;font-weight: bold;margin-top: 30px;">媒体报道</dt>
+	                        			<dd style="margin-top: 15px;font-size: 12px;width:744px;height: 610px;">
+	                        				<p style="font-size: 12px;">优购从2011年7月上线以来，历时多年的发展，依托百丽国际投资背景，凭借优质、时尚货品资源，新货占比量在70%以上，其快速发展历程也受到来自各大媒体的关注与聚焦。</p>
+	                        				<p style="margin-top: 10px;font-size: 12px;">
+	                        					<a href="#" style="margin-right: 23px;color: blue;">优购及百丽电商双十一截止上午11：00已过50万单</a>
+	                        					<a href="#" style="margin-right: 23px;color: blue;">“双十一”百丽国际给钱给货给人</a>
+	                        					<a href="#" style="margin-right: 23px;color: blue;">优购将推自有品牌运动鞋</a>
+	                        					<a href="#" style="margin-right: 23px;color: blue;">优购周年庆推出每日免单</a>
+	                        					<a href="#" style="margin-right: 23px;color: blue;">10月优购时尚商城大规模引进美国牛仔品牌LEE</a>
+	                        				</p>
+	                        		        <p style="margin-top: 20px;"><img src="img/shopp16.jpg"/></p>
+	                        			</dd>
+	                        			<dt style="border-bottom: 1px solid #ddd;height: 30px;line-height: 30px;font-size: 14px;font-weight: bold;margin-top: 30px;">热点问题</dt>
+	                        			<dd style="margin-top:15px ;width: 744px;height: 280px;">
+	                        				<h5 style="font-size: 12px;">订单生成后如何修改订单：</h5>
+	                        				<p style="line-height: 20px;color: #666;font-size: 12px;">您的订单生成后，所有订单信息您将无法自行修改，如需修改可通过以下两种方式进行操作：<br />方法一：自主取消订单后重新订购商品<br />方法二：联系客服人员修改订单</p>
+	                        			    <h5 style="font-size: 12px;">如何查询订单配送情况：</h5>
+	                        				<p style="line-height: 20px;color: #666;font-size: 12px;">订单发货后，无需致电客服查询物流进度，大约48小时后，自主登录优购网——“我的订单”中了解快递配送进度。</p>
+	                        			    <h5 style="font-size: 12px;">签收商品时，您需要注意的是：</h5>
+	                        				<p style="line-height: 20px;color: #666;font-size: 12px;">第一步：检查物流包装、“优购安全封条”是否完好<br />第二步：开箱验货<br />第三步：1. 满意后再签收</p>
+	                        			    <p style="line-height: 20px;margin-left: 48px;font-size: 12px;color: #666;"> 2. 商品不满意/存在质量问题：直接拒收</p>
+	                        			     <p style="line-height: 20px;margin-left: 48px;font-size: 12px;color: #666;"> 3. 缺少商品，直接拒收</p>
+	                        			</dd>
+	                        			<div style="width: 744px;height: 288px;padding: 0 25px 40px 25px;">
+	                        				<dl style="margin-bottom: 15px;">
+	                        					<dt style="    padding-bottom: 2px;font-size: 14px;width: 744px;height: 27px;color: #666;"><i style="display: inline-block;margin-right: 7px;width: 20px;height: 20px;background: url(img/nav5.png) no-repeat -217px -99px;"></i>关于色差</dt>
+			                        			<dd style="padding-left: 27px;font-size: 12px;color: #999;">
+			                        				因拍照、灯光、各显示器显示效果不同等原因，实物与图片显示可能会有微弱色差，实际颜色以您收到的商品为准，色差问题不属于质量问题。
+			                        			</dd>
+	                        				</dl>
+		                        			<dl style="margin-bottom: 15px;">
+			                        			<dt style="    padding-bottom: 2px;font-size: 14px;width: 744px;height: 27px;color: #666;"><i style="display: inline-block;margin-right: 7px;width: 20px;height: 20px;background: url(img/nav5.png) no-repeat -176px -99px;"></i>关于尺码</dt>
+			                        			<dd style="padding-left: 27px;font-size: 12px;color: #999;">
+			                        				因品牌尺码体系，鞋型及测量方法不同，商品实际尺码与我们提供的数据可能存在细微的差别，属正常现象，请您保留最终决定权。
+			                        			</dd>
+	                        				</dl>
+	                        				<dl style="margin-bottom: 15px;">
+			                        			<dt style="    padding-bottom: 2px;font-size: 14px;width: 744px;height: 27px;color: #666;"><i style="display: inline-block;margin-right: 7px;width: 20px;height: 20px;background: url(img/nav5.png) no-repeat -196px -99px;"></i>关于发货</dt>
+			                        			<dd style="padding-left: 27px;font-size: 12px;color: #999;">
+			                        				由优购直接出库在线支付订单最快会在24小时内为您安排出库，系统会根据收货地址、商品库存等因素自动分配最近的仓库配送。
+			                        			</dd>
+	                        				</dl>
+	                        				<dl style="margin-bottom: 15px;">
+			                        			<dt style="    padding-bottom: 2px;font-size: 14px;width: 744px;height: 27px;color: #666;"><i style="display: inline-block;margin-right: 7px;width: 20px;height: 20px;background: url(img/nav5.png) no-repeat -154px -99px;"></i>物流公司</dt>
+			                        			<dd style="padding-left: 27px;font-size: 12px;color: #999;">
+			                        				优购目前不支持指定快递，系统会根据填写的收货地址自动分配圆通，申通，中通、通路、微特派等快递进行派送，客户在48小时后，自主登录优购网——“我的订单”中了解快递配送进度。
+			                        			</dd>
+	                        				</dl>
+	                        			</div>
+	                        		</dl>
+	                        	</div>
+	                        </div>
+	                      </div>
+	                      <div id="bbbb" style="width: 970px;height: 100%;float: left;">
+	                      <div id="dianping" style="width: 794px;height: 120px;padding-top: 20px;">
+	                    <p style="font-size: 14px;color: #999999;">该商品暂无点评</p>
+	                    <p style="font-size: 14px;color: #666;">赶快来发表第一个点评吧！<a href="#" style="display: inline-block;height: 22px;width: 78px;background: url(img/nav7.png) no-repeat -675px 0;font-size: 14px;color: #fff;text-align: center;">我要写评价</a></p>
+	                    <p style="margin-top: 40px;"><a href="#" style="color: blue;text-decoration: underline;">查看更多评价>></a></p>
+	                </div>
+	                <ul id="li_bz" style="list-style: none;">
+	                	<li  style="width: 679px;height: 138px;padding: 40px 10px 0 73px;text-align: left;position: relative;">
+            				<span style="position: absolute;top: 35px;left: 10px;display: block;width: 47px;height: 49px;background: url(img/nav5.png) no-repeat -154px 0;"></span>
+            				<h4 style="font-size: 22px;color: #666;">正品保障</h4>
+            				<p style="color: #8f8f8f;font-size: 14px;padding: 3px 0 10px;line-height: 25px;">诚信为本，优购销售的商品均为品牌商直接供货</p>
+            				<p style="font-size: 12px;">优购为百丽集团旗下时尚及运动鞋服类购物网站，始终坚持优质正品的品牌理念，以用户体验、服务至上为宗旨，依托投资方百丽国际强大的供应链、资金及品牌优势，经营范围涉及"男鞋、女鞋、男装、女装、运动、户外、童鞋、箱包" 八大品类，涵盖百丽、天美意、莱尔斯丹、fed、哈森、森达、季候风、OZZO、利郎、耐克、阿迪达斯、CAT、哥伦比亚等数百个知名品牌，数十万款商品。</p>
+            			</li>
+	                </ul>
+	                <ul id="li_th"  style="list-style: none;">
+	                <li style="width: 762px;height: 344px;padding: 40px 10px 0 73px;text-align: left;position: relative;">
+						<span style="position: absolute;top: 35px;left: 10px;display: block;width: 47px;height: 49px;background: url(img/nav5.png) no-repeat -201px 0;"></span>
+						<h4 style="font-size: 22px;color: #666;">10天退换货服务</h4>
+						<p style="color: #8f8f8f;font-size: 14px;padding: 3px 0 10px;line-height: 25px;">优购为您提供10天（自签收之日起）退换货服务，让您购物无风险</p>
+					    <table style="width: 678px;height: 260px;border-collapse: collapse;border: 1px solid #d9d9d9;border-bottom: 0; text-align: center;">
+					    	<thead style="width: 675px;height: 51px;background: #aaa;font-size: 12px;font-weight: bold;"><tr><th style="width: 328px;height: 40px;padding: 5px;">以下情况可办理退换货</th><th>以下情况不可办理退换货</th></tr></thead>
+					        <tbody>
+					        	<tr style="border-bottom: 1px solid #d9d9d9;font-size: 14px;line-height: 30px;"><td style="height: 30px;">商品不满意可退换</td><td style="border-left:1px solid #d9d9d9 ;height: 30px;">超过10天有效期不可退换</td></tr>
+					        	<tr style="border-bottom: 1px solid #d9d9d9;font-size: 14px;"><td>尺码不适合可退换</td><td style="border-left:1px solid #d9d9d9 ;">商品无法二次销售不可退换</td></tr>
+					        	<tr style="border-bottom: 1px solid #d9d9d9;font-size: 14px;"><td>质量问题可退换</td><td style="border-left:1px solid #d9d9d9 ;">鞋盒损坏、粘绑胶带不可退换</td></tr>
+					        	<tr style="border-bottom: 1px solid #d9d9d9;font-size: 14px;"><td>配送错误可退换</td><td style="border-left:1px solid #d9d9d9 ;">商品相关附件丢失不可退换</td></tr>
+					        </tbody>
+					    </table>
+					    <p style="font-size: 12px;"><span style="color: red;">温馨提示：</span>退换货时请将购物凭证随货寄回，并填写相关信息<a href="#" style="float: right;margin-right: 100px;color: blue;">点击查看售后服务详细说明>></a></p>
+					</li>
+	                </ul>
+	                
+	                <ul id="li_dc"  style="list-style: none;">
+	                	<li style="width: 760px;height: 460px;padding: 40px 10px 0 73px;text-align: left;position: relative;">
+            				<span style="position: absolute;top: 35px;left: 10px;display: block;width: 47px;height: 49px;background: url(img/nav5.png) no-repeat -154px -49px;"></span>
+            				<h4 style="font-size: 22px;color: #666;">10天掉价补差价</h4>
+            				<p style="color: #8f8f8f;font-size: 14px;padding: 3px 0 10px;line-height: 25px;">优购网商品售价（优购价）因季节等因素发生变化时，将给予顾客10天补差价</p>
+            			    <p style="color: #8f8f8f;font-size: 14px;line-height: 25px;">即：在订单签收起10日内，如订单内商品降价<span style="color: red;">(优购价降价)</span>，您可以通过售后热线、在线客服、客服邮箱等方式申请价保，我们会在接到申请后，将您申请时的价格与您订购商品的价格差以礼品卡的形式予以返还。</p>
+            			    <p style="font-size: 12px;"><span style="color: red;">温馨提示：</span>退符合补差价条件的同款商品10天内仅享受一次补差价</p>
+            			    <div style="width: 679px;175px;padding-top: 10px;">
+            			    	<h5 style="font-size: 14px;line-height: 22px;color:#666;">价保原则如下：</h5>
+            			    	<table style="color: #9B9B9B;width: 679px;height: 153px;border-collapse: collapse;border: 1px solid #d9d9d9">
+            			    		<thead style="background: #CCCCCC;"><tr style="font-size: 12px;"><td>什么时候申请？</td><td>怎么申请？</td><td>怎么返还？</td><td>补差礼品卡使用规则</td></tr></thead>
+            			    		<tbody>
+            			    			<tr style="font-size: 12px;"><td style="border-right: 1px solid #ccc;">签收之日起10天内</td><td style="border-right: 1px solid #ccc;"><ul style="list-style: none;">
+            			    				<li>1、联系售后热线申请</li><li>2、联系在线客服申请</li><li><a href="#" style="font-size: 12px;">在线咨询</a></li>3、发送客服邮箱申请<li></li>
+            			    			</ul></td><td style="border-right: 1px solid #ccc;">差价以礼品卡的形式予以返还</td><td style="border-right: 1px solid #ccc;"><ul style="list-style: none;">
+            			    				<li>1、礼品卡通常不受网站促销活动限制，可与优惠券同时使用（每张订单只能使用一张优惠券和一张礼品卡）</li>
+            			    				<li>2、已享受补差的商品如发生退货，我司将作废礼品卡或直接从商品退款中扣除同等礼品卡金额</li>
+            			    				<li>注：此规则从2012年12月5日起执行</li>
+            			    			</ul></td></tr>
+            			    		</tbody>
+            			    	</table>
+            			    </div>
+            			    <div style="width: 679px;height: 182px;padding-top: 10px;">
+            			    	<h5 style="font-size: 14px;line-height: 22px;font-weight: bold;color: #666;">不享受十天补差声明：</h5>
+            			    	<ul style="list-style: none;font-size: 12px;color: #9B9B9B;">
+            			    		<li>1、换货商品不享受十天补差价；</li>
+            			    		<li>2、秒杀、团购商品不享受十天补差；</li>
+            			    		<li>3、差价在5元或以下的不享受十天补差；</li>
+            			    		<li>4、购买时包含赠品的商品不享受十天补差；</li>
+            			    		<li>5、有售馨、断码标识、已下架的商品不享受十天补差价；</li>
+            			    		<li>6、如订单使用优惠券，申请退差后达不到优惠券使用条件的不享受十天补差；</li>
+            			    		<li>7、涉及全场活动，如：套餐组合、加价换购、满减、多件折等促销活动不享受十天补差；</li>
+            			    		<li>8、在线支付订单的部分商品补差剩余金额不满99元，按照订单99元免运费条件，需扣除15元运费计算补差。</li>
+            			    	</ul>
+            			    </div>
+            			</li>
+	                </ul>
+	                
+	                <ul id="li_by" style="list-style: none;">
+	                	<li style="width: 679px;height: 108px;padding: 40px 10px 0 73px;text-align: left;position: relative;">
+            				<span style="position: absolute;top: 35px;left: 10px;display: block;width: 47px;height: 49px;background: url(img/nav5.png) no-repeat -201px -49px;"></span>
+            				<h4 style="font-size: 22px;color: #666;">7×24小时贴心客服</h4>
+            				<p style="color: #8f8f8f;font-size: 14px;padding: 3px 0 10px;line-height: 25px;">优购客服中心为您提供<span style="color: red;">7×24小时全年无休</span>的优质服务<br />
+            				如果您有任何问题，欢迎与我们联系。<br />客服邮箱：<span style="color: blue;">service@yougou.com</span>
+            				</p>
+            				
+            			</li>
+	                </ul>
+	                </div>
+			        </div>
+			        
+			        <div style="width: 1190px;height: 298px;margin: 0 auto;border: 1px solid #ddd;">
+			        	<div style="width: 208px;height: 298px;float: left;border-right: 1px solid #ddd;">
+			        		<div style="height: 36px;border-bottom: 1px dashed #666;text-align: left;line-height: 30px;font-weight: bold;">最近浏览</div>
+			        		<ul style="list-style: none;">
+			        			<li style="width: 186px;height: 60px;padding: 10px;"><a href="#">
+			        				<div style="width: 60px;height: 60px;float: left;">
+			        					<img  src="img/shopp_foot1.jpg"/>
+			        				</div>
+			        				<div style="padding-left: 15px;float: left;width: 100px;height: 54px;">
+			        					<p style="font-size: 12px;color: #666;">adidas阿迪休闲20</p>
+			        					<p style="padding-top: 5px;color: #aaa;"><span style="font-size: 18px;line-height: 25px;color: red;">￥599</span><i style="font-style: normal;font-size: 18px;line-height: 25px;text-decoration: line-through;">￥599</i></p>
+			        				</div>
+			        			</a></li>
+			        			<li style="width: 186px;height: 60px;padding: 10px;"><a href="#">
+			        				<div style="width: 60px;height: 60px;float: left;">
+			        					<img  src="img/shopp_foot2_t.jpg"/>
+			        				</div>
+			        				<div style="padding-left: 15px;float: left;width: 100px;height: 54px;">
+			        					<p style="font-size: 12px;color: #666;">adidas阿迪休闲20</p>
+			        					<p style="padding-top: 5px;color: #aaa;"><span style="font-size: 18px;line-height: 25px;color: red;">￥499</span><i style="font-style: normal;font-size: 18px;line-height: 25px;text-decoration: line-through;">￥499</i></p>
+			        				</div>
+			        			</a></li>
+			        			<li style="width: 186px;height: 60px;padding: 10px;"><a href="#">
+			        				<div style="width: 60px;height: 60px;float: left;">
+			        					<img  src="img/shopp_foot3.jpg"/>
+			        				</div>
+			        				<div style="padding-left: 15px;float: left;width: 100px;height: 54px;">
+			        					<p style="font-size: 12px;color: #666;">CHUMS洽睦斯 201</p>
+			        					<p style="padding-top: 5px;color: #aaa;"><span style="font-size: 18px;line-height: 25px;color: red;">￥48</span><i style="font-style: normal;font-size: 18px;line-height: 25px;text-decoration: line-through;">￥48</i></p>
+			        				</div>
+			        			</a></li>
+			        		</ul>
+			        	</div>
+			        	<div style="width: 972px;height: 298px;float: left;position: relative;overflow: hidden;">
+			        		<p style="width: 122px;height: 21px;position: absolute;top: 5px;left: 2px;font-size: 14px;font-weight: bold;#666">根据浏览猜您喜欢</p>
+			        		<p style="width: 82px;height: 18px;position: absolute;top: 5px;right: 5px;font-size: 12px;">第<span id="shopp_span">1</span>页，共2页</p>
+			        		<a id="shopp_btn1" style="z-index: 99;display: block;height: 22px;width: 12px;font-weight: bold;cursor: pointer;position: absolute;top: 124px;left: 8px;font-size: 18px;"><</a>
+			        		<a id="shopp_btn2"  style="z-index: 99;display: block;height: 22px;width: 12px;font-weight: bold;cursor: pointer;position: absolute;top: 124px;right: 8px;font-size: 18px;">></a>
+			        		<div  style="width: 938px;height: 298px;margin: 0 auto;">
+			        			<ul id="shopp_ul" style="width: 4000px;height: 282px;list-style: none;position: absolute;">
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot4.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">鸿星尔克erke2016秋季新款女开衫带帽卫衣</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>179</strong></span><i style="color: #ddd;text-decoration: line-through;">￥339</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot5.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪休闲2016年新款男子休闲系列休闲鞋B74369</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>599</strong></span><i style="color: #ddd;text-decoration: line-through;">￥599</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot6.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪三叶草2016年新款女子三叶草系列休闲鞋S76148</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>479</strong></span><i style="color: #ddd;text-decoration: line-through;">￥639</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot7.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋B27395</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>579</strong></span><i style="color: #ddd;text-decoration: line-through;">￥739</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot8.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪休闲2016年新款女子休闲系列休闲鞋AW4237</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>564</strong></span><i style="color: #ddd;text-decoration: line-through;">￥759</i></p>
+			        			</li>
+			        			
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot9.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋AQ8333</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>679</strong></span><i style="color: #ddd;text-decoration: line-through;">￥739</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot10.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪达斯2016年新款男子场下休闲系列篮球鞋AW5087</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>599</strong></span><i style="color: #ddd;text-decoration: line-through;">￥599</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot11.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">PUMA彪马2016新款女子经典生活系列针织卫衣57226604</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>479</strong></span><i style="color: #ddd;text-decoration: line-through;">￥639</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot12.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪三叶草2016年新款中性三叶草系列休闲鞋B27410</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>579</strong></span><i style="color: #ddd;text-decoration: line-through;">￥739</i></p>
+			        			</li>
+			        			<li style="float: left;width: 176px;height: 222px;padding: 30px 8px 30px 5px;">
+			        				<a href="#"><img src="img/shopp_foot13.jpg"/></a>
+			        				<a href="#" style="font-size: 12px;color: #666;">adidas阿迪达斯2016年新款男子网球文化系列网球鞋S41953</a>
+			        				<p style="font-size: 16px;color: #ddd;"><span style="color: red;">￥<strong>564</strong></span><i style="color: #ddd;text-decoration: line-through;">￥759</i></p>
+			        			</li>
+			        		</ul>
+			        		</div>
+			        	</div>
+			        </div>
+			  
+	        </div>
+		    
+		    <div id="fx" >
+			        		<a id="lt_a1"  class="ared">商品详情</a><a  id="lt_a2">商品点评</a><a  id="lt_a3">购物保障</a><a  id="lt_a4">退换货无忧</a><a  id="lt_a5">支付与配送</a><a  id="lt_a6">如何保养</a>
+			        	</div>
+		    
+		    
+		    
+		    
+		    <div class="fengexian2"></div>
+		    <div class="foot_hd">
+		    	<h2>优购导购</h2>
+		    	<div class="foot_hd_box">
+		    		<a class="foot_hd_firsta"><</a><a class="foot_hd_seconda">></a>
+		    		<div class="foot_show_box foot_show_box1">
+		    			<a href=""><img src="img/more1.jpg"/>耐克</a>
+		    			<a href=""><img src="img/more2.jpg"/>阿迪达斯</a>
+		    			<a href=""><img src="img/more3.jpg"/>阿迪三叶草</a>
+		    			<a href=""><img src="img/more4.jpg"/>New Balance</a>
+		    			<a href=""><img src="img/more10.jpg"/>百丽</a>
+		    			<a href=""><img src="img/more11.png"/>她他</a>
+		    			<a href=""><img src="img/more12.jpg"/>天美意</a>
+		    			<a href=""><img src="img/more15.jpg"/>森达</a>
+		    			<a href=""><img src="img/more59.jpg"/>莱尔斯丹</a>
+		    			<a href=""><img src="img/more6.jpg"/>彪马</a>
+		    			<a href=""><img src="img/more37.jpg"/>鬼冢虎</a>
+		    			<a href=""><img src="img/more5.jpg"/>匡威</a>
+		    			<a href=""><img src="img/more60.jpg"/>阿迪休闲</a>
+		    			<a href=""><img src="img/more61.jpg"/>斯凯奇</a>
+		    			<a href="" ><img src="img/more41.jpg" style="width: 85px;height: 40px;"/>百思图</a>
+		    			<a href=""><img src="img/more62.jpg"/>马克华菲</a>
+		    			<a href=""><img src="img/more13.jpg"/>思加图</a>
+		    			<a href=""><img src="img/more35.jpg"/>Jack</a>
+		    			<a href=""><img src="img/more31.jpg"/>LEE</a>
+		    			<a href=""><img src="img/more23.jpg"/>卡特</a>
+		    			<a href=""><img src="img/more14.jpg"/>拔佳</a>
+		    			<a href=""><img src="img/more63.jpg"/>CK</a>
+		    			<a href=""><img src="img/more64.jpg"/>乔丹</a>
+		    			<a href=""><img src="img/more7.jpg"/>万斯</a>
+		    			<a href=""><img src="img/more65.jpg"/>特步</a>
+		    			<a href=""><img src="img/more29.jpg"/>佐丹奴</a>
+		    			<a href=""><img src="img/more58.jpg"/>361</a>
+		    			<a href=""><img src="img/more34.jpg"/>康尔健野</a>
+		    			<a href=""><img src="img/more45.jpg"/>添柏岚</a>
+		    			<a href=""><img src="img/more66.jpg"/>探路者</a>
+		    			<a href=""><img src="img/more67.jpg"/>奥卡索</a>
+		    			<a href=""><img src="img/more22.jpg"/>暇步士</a>
+		    			<a href=""><img src="img/more68.jpg"/>RAX</a>
+		    			<a href=""><img src="img/more69.jpg"/>爱华仕</a>
+		    			<a href=""><img src="img/more38.jpg"/>Paul</a>
+		    			<a href=""><img src="img/more17.jpg"/>乐斯菲斯</a>
+		    			<a href=""><img src="img/more16.jpg"/>哥伦比亚</a>
+		    			<a href=""><img src="img/more27.jpg"/>李宁</a>
+		    			<a href=""><img src="img/more70.jpg"/>鸿星尔克</a>
+		    			<a href=""><img src="img/more39.jpg"/>Dickies</a>
+		    			<a href=""><img src="img/more8.jpg"/>亚瑟斯</a>
+		    			<a href=""><img src="img/more71.jpg"/>回力</a>
+		    			<a href=""><img src="img/more72.jpg"/>LeeCooper</a>
+		    			<a href=""><img src="img/more25.jpg"/>茵奈儿</a>
+		    			<a href=""><img src="img/more73.jpg"/>seven7</a>
+		    			<a href=""><img src="img/more28.jpg"/>真诗美</a>
+		    			<a href=""><img src="img/more74.jpg"/>迪士尼</a>
+		    			<a href=""><img src="img/more75.jpg"/>TOPGIRL</a>
+		    		</div>
+		    	    <div class="foot_show_box foot_show_box2">
+		    			<a href=""><img src="img/more8.jpg"/>亚瑟斯</a>
+		    			<a href=""><img src="img/more71.jpg"/>回力</a>
+		    			<a href=""><img src="img/more72.jpg"/>LeeCooper</a>
+		    			<a href=""><img src="img/more25.jpg"/>茵奈儿</a>
+		    			<a href=""><img src="img/more63.jpg"/>CK</a>
+		    			<a href=""><img src="img/more17.jpg"/>乐斯菲斯</a>
+		    			<a href=""><img src="img/more16.jpg"/>哥伦比亚</a>
+		    			<a href=""><img src="img/more65.jpg"/>特步</a>
+		    			<a href=""><img src="img/more73.jpg"/>seven7</a>
+		    			<a href=""><img src="img/more28.jpg"/>真诗美</a>
+		    			<a href=""><img src="img/more15.jpg"/>森达</a>
+		    			<a href=""><img src="img/more66.jpg"/>探路者</a>
+		    			<a href=""><img src="img/more67.jpg"/>奥卡索</a>
+		    			<a href=""><img src="img/more61.jpg"/>斯凯奇</a>
+		    			<a href="" ><img src="img/more41.jpg" style="width: 85px;height: 40px;"/>百思图</a>
+		    			<a href=""><img src="img/more62.jpg"/>马克华菲</a>
+		    			<a href=""><img src="img/more13.jpg"/>思加图</a>
+		    			<a href=""><img src="img/more35.jpg"/>Jack</a>
+		    			<a href=""><img src="img/more31.jpg"/>LEE</a>
+		    			<a href=""><img src="img/more23.jpg"/>卡特</a>
+		    			<a href=""><img src="img/more27.jpg"/>李宁</a>
+		    			<a href=""><img src="img/more59.jpg"/>莱尔斯丹</a>
+		    			<a href=""><img src="img/more6.jpg"/>彪马</a>
+		    			<a href=""><img src="img/more37.jpg"/>鬼冢虎</a>
+		    			<a href=""><img src="img/more5.jpg"/>匡威</a>
+		    			<a href=""><img src="img/more60.jpg"/>阿迪休闲</a>
+		    			<a href=""><img src="img/more14.jpg"/>拔佳</a>
+		    			<a href=""><img src="img/more29.jpg"/>佐丹奴</a>
+		    			<a href=""><img src="img/more64.jpg"/>乔丹</a>
+		    			<a href=""><img src="img/more7.jpg"/>万斯</a>
+		    			<a href=""><img src="img/more1.jpg"/>耐克</a>
+		    			<a href=""><img src="img/more2.jpg"/>阿迪达斯</a>
+		    			<a href=""><img src="img/more22.jpg"/>暇步士</a>
+		    			<a href=""><img src="img/more68.jpg"/>RAX</a>
+		    			<a href=""><img src="img/more69.jpg"/>爱华仕</a>
+		    			<a href=""><img src="img/more38.jpg"/>Paul</a>
+		    			<a href=""><img src="img/more58.jpg"/>361</a>
+		    			<a href=""><img src="img/more34.jpg"/>康尔健野</a>
+		    			<a href=""><img src="img/more45.jpg"/>添柏岚</a>
+		    			<a href=""><img src="img/more3.jpg"/>阿迪三叶草</a>
+		    			<a href=""><img src="img/more4.jpg"/>New Balance</a>
+		    			<a href=""><img src="img/more10.jpg"/>百丽</a>
+		    			<a href=""><img src="img/more11.png"/>她他</a>
+		    			<a href=""><img src="img/more12.jpg"/>天美意</a>
+		    			<a href=""><img src="img/more70.jpg"/>鸿星尔克</a>
+		    			<a href=""><img src="img/more39.jpg"/>Dickies</a>
+		    			<a href=""><img src="img/more74.jpg"/>迪士尼</a>
+		    			<a href=""><img src="img/more75.jpg"/>TOPGIRL</a>
+		    		</div>
+		    	    <div class="foot_fenge"></div>
+		    	    <ul>
+		    		    <li><a href="#" class="dl_a">更多>></a><dl><dd class="dd"><a href="#">时尚运动</a></dd><a href="#">跑步鞋</a><a href="#">板鞋</a><a href="#">篮球鞋</a><a href="#">T恤</a><a href="#">POLO衫</a><a href="#">短裤</a><dt></dt></dl></li>
+		    		    <li><a href="#" class="dl_a">更多>></a><dl><dd class="dd"><a href="#">流行男鞋</a></dd><a href="#">凉鞋</a><a href="#">乐福鞋</a><a href="#">帆布鞋</a><a href="#">系带</a><a href="#">套脚</a><a href="#">正装</a><dt></dt></dl></li>
+		    		    <li><a href="#" class="dl_a">更多>></a><dl><dd class="dd"><a href="#">流行女鞋</a></dd><a href="#">中空凉鞋</a><a href="#">镂空</a><a href="#">鱼嘴</a><a href="#">平底</a><a href="#">拖鞋</a><a href="#">高跟</a><dt></dt></dl></li>
+		    		    <li><a href="#" class="dl_a">更多>></a><dl><dd class="dd"><a href="#">童鞋童装</a></dd><a href="#">户外鞋</a><a href="#">跑步鞋</a><a href="#">板鞋</a><a href="#">裤装</a><a href="#">套装</a><a href="#">包配</a><dt></dt></dl></li>
+		    		    <li><a href="#" class="dl_a">更多>></a><dl><dd class="dd"><a href="#">魅力女装</a></dd><a href="#">连衣裙</a><a href="#">半身裙</a><a href="#">衬衫</a><a href="#">T恤</a><a href="#">短裤</a><a href="#">休闲裤</a><dt></dt></dl></li>
+		    		    <li><a href="#" class="dl_a">更多>></a><dl><dd class="dd"><a href="#">户外休闲</a></dd><a href="#">户外鞋靴</a><a href="#">冲锋衣</a><a href="#">皮肤衣</a><a href="#">T恤</a><a href="#">裤装</a><a href="#">包配</a><dt></dt></dl></li>
+		    		    <li><a href="#" class="dl_a">更多>></a><dl><dd class="dd"><a href="#">精品男装</a></dd><a href="#">T恤</a><a href="#">衬衫</a><a href="#">卫衣</a><a href="#">衬衫</a><a href="#">牛仔裤</a><a href="#">休闲裤</a><dt></dt></dl></li>
+		    		    <li><a href="#" class="dl_a">更多>></a><dl><dd class="dd"><a href="#">高档箱包</a></dd><a href="#">单肩包</a><a href="#">手提包</a><a href="#">双肩包</a><a href="#">钱包</a><a href="#">手提包</a><a href="#">旅行箱</a><dt></dt></dl></li>
+		    	    </ul>
+		    	</div>
+		    </div>
+		    <div class="foot_body">
+		    	<ul class="foot_body_ul">
+		    		<li><i class="foot_i1"></i><a href="#"><em>正品</em>保证</a></li>
+		    		<li><i class="foot_i2"></i><a href="#"><em>10天</em>退换货</a></li>
+		    		<li><i class="foot_i3"></i><a href="#"><em>10天调价</em>补差额</a></li>
+		    		<li><i class="foot_i4"></i><a href="#"><em>7X24小时</em>在线服务</a></li>
+		    	</ul>
+		    	<div class="foot_body_foot">
+		    		<dl>
+		    			<dt>新手帮助</dt>
+		    			<dd><a href="#">交易条款协议</a></dd>
+		    			<dd><a href="#">注册新用户</a></dd>
+		    			<dd><a href="#">会员积分详情</a></dd>
+		    		</dl>
+		    		<dl>
+		    			<dt>购物指南</dt>
+		    			<dd><a href="#">订购流程</a></dd>
+		    			<dd><a href="#">验货与签收</a></dd>
+		    			<dd><a href="#">订单配送查询</a></dd>
+		    		</dl>
+		    		<dl>
+		    			<dt>支付/配送</dt>
+		    			<dd><a href="#">支付方式</a></dd>
+		    			<dd><a href="#">配送方式</a></dd>
+		    			<dd><a href="#">配送时间及运费</a></dd>
+		    		</dl>
+		    		<dl>
+		    			<dt>售后服务</dt>
+		    			<dd><a href="#">退换货政策</a></dd>
+		    			<dd><a href="#">退款说明</a></dd>
+		    			<dd><a href="#">发票制度</a></dd>
+		    		</dl>
+		    		<dl>
+		    			<dt>会员服务</dt>
+		    			<dd><a href="#">找回密码</a></dd>
+		    			<dd><a href="#">联系我们</a></dd>
+		    		</dl>
+		    		<dl class="foot_body_dl1">
+		    			<dt>优购客服</dt>
+		    			<dd><a href="#" class="foot_body_a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:在线咨询</a></dd>
+		    			<dd>Email：<a href="#">sn@yougou.com</a></dd>
+		    			<dd>分享购QQ群：<a href="#">518411158</a></dd>
+		    			<dd>分享购微信号：<a href="#">yougoufengxianggou</a></dd>
+		    		</dl>
+		    		<dl class="foot_body_dl2">
+		    			<dd><a href="#"><img src="img/erweima1.jpg"/></a></dd>
+		    		</dl>
+		    		<dl class="foot_body_dl2 foot_body_dl3">
+		    			<dd><a href="#"><img src="img/erweima2.jpg"/></a></dd>
+		    		</dl>
+		    	</div>
+		    </div>
+		    <div class="foot">
+		    	<div class="foot_box">
+		    	    <div class="foot_first"><a href="#" title="www.yougou.com"><img src="img/foot1.gif"/></a></div>
+		            <div class="foot_second">
+		            	<p class="foot_p1">
+		            		<a href="#">关于优购</a> | <a href="#">品牌招商</a> | <a href="#">集团采购</a> | <a href="#">招贤纳士</a> | <a href="#">手机优购</a> | <a href="#">联系我们</a> | <a href="#">品牌大全</a> | <a href="#">网站地图</a> | <a href="#">销售排行</a> | <a href="#">优购咨询</a> | <a href="#">网站联盟</a> | <a href="#">友情链接</a>
+		            	</p>
+		            	<p class="foot_p2">	
+                            Copyright&copy;2011-2016 Yougou Technology Co., Ltd.<a href="#">粤ICP备09070608号-4</a>&nbsp;增值电信业务经营许可证：<a href="#">粤B2-2009020</a>&nbsp;深公网安备：4403101910665<a href="#" class="foot_a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤公网安备 44030502000017号</a>
+		            	</p>
+		            	<p class="foot_p3">
+		            		<a href="#"><img src="img/foot_3.png"/></a>
+		            		<a href="#"><img src="img/foot_4.png"/></a>
+		            		<a href="#"><img src="img/foot_5.jpg"/></a>
+		            		<a href="#"><img src="img/foot_6.png" style="width: 108px;height: 40px;"/></a>
+		            		<a href="#"><img src="img/foot_7.png"/></a>
+		            	</p>
+		            </div>
+		    	</div>
+		    </div>
+		    <div class="fixd">
+		    	<div class="fixd_box">
+		    		<div class="fixd_box1"><img src="img/fixd_1.png"/></div>
+		    		<div class="fixd_box2"><a href="#"><img src="img/fixd_2.png"/></a></div>
+		    		<div class="fixd_box3"><img src="img/fixd_4.png"/><a href="#" class="fixd_a"><img src="img/fixd_5.png"/></a></div>
+		    	</div>
+		    </div>
+		
+		
+             <div class="top">
+             	<a style="margin-top: 5px;border: 1px solid #d7d7d7;display: block;padding: 8px;    width: 26px;height: 26px;    line-height: 14px;text-align: center;overflow: hidden;text-decoration: none;background: #f4f4f4 url(img/pro_top.png) no-repeat center center;"></a>
+             </div>		
+ 		     <div class="pro_fixd">
+		     	<div class="pro_fixd1">
+		     		<p style="background: #d1d1d1;margin-right: 513px;height: 44px;"><i style="font-style: normal;float: right;display: block;width: 32px;height: 62px;background: url(img/pro_foot.gif) no-repeat 0 0;"></i></p>
+		     	</div>
+		     	<div class="pro_fixd2">
+		     		<p style="background: #d1d1d1;margin-left: 513px;height: 44px;"><i style="font-style: normal;float: left;display: block;width: 32px;height: 62px;background:  url(img/pro_foot.gif) no-repeat -32px 0;"></i></p>
+		     	</div>
+		     	<div class="pro_fixd3">
+		     		<div class="pro_fixd4">
+		     			<p style="font-size: 12px;width: 470px;height: 25px;margin-top: 3px;float: left;margin: 0 0 10px 0;clear: both;">
+		     				<span style="font-size: 12px;display: inline;float: left;width:24px;height: 18px;">尺码</span>
+		     				<span style="font-size: 12px;display: inline;width: 400px;height: 25px;margin-left: 10px;float: left;">
+		     					<a style="font-size: 12px;text-decoration: none;margin-bottom: 5px;border-color: #ddd;float: none;border: 1px solid #ececec;border-right: 1px solid #a7a7a7;border-bottom: 1px solid #a7a7a7;min-width: 24px;width: auto!important;overflow: visible;height: 18px;line-height: 18px;padding: 0 4px 0 4px;display: inline-block;background: #fff;margin-right: 10px;text-align: center;cursor: pointer;">39</a>
+		     				    <a style="font-size: 12px;text-decoration: none;margin-bottom: 5px;border-color: #ddd;float: none;border: 1px solid #ececec;border-right: 1px solid #a7a7a7;border-bottom: 1px solid #a7a7a7;min-width: 24px;width: auto!important;overflow: visible;height: 18px;line-height: 18px;padding: 0 4px 0 4px;display: inline-block;background: #fff;margin-right: 10px;text-align: center;cursor: pointer;">40</a>
+		     				    <a style="font-size: 12px;text-decoration: none;margin-bottom: 5px;border-color: #ddd;float: none;border: 1px solid #ececec;border-right: 1px solid #a7a7a7;border-bottom: 1px solid #a7a7a7;min-width: 24px;width: auto!important;overflow: visible;height: 18px;line-height: 18px;padding: 0 4px 0 4px;display: inline-block;background: #fff;margin-right: 10px;text-align: center;cursor: pointer;">40.5</a>
+		     				    <a style="font-size: 12px;text-decoration: none;margin-bottom: 5px;border-color: #ddd;float: none;border: 1px solid #ececec;border-right: 1px solid #a7a7a7;border-bottom: 1px solid #a7a7a7;min-width: 24px;width: auto!important;overflow: visible;height: 18px;line-height: 18px;padding: 0 4px 0 4px;display: inline-block;background: #fff;margin-right: 10px;text-align: center;cursor: pointer;">41</a>
+		     				    <a style="font-size: 12px;text-decoration: none;margin-bottom: 5px;border-color: #ddd;float: none;border: 1px solid #ececec;border-right: 1px solid #a7a7a7;border-bottom: 1px solid #a7a7a7;min-width: 24px;width: auto!important;overflow: visible;height: 18px;line-height: 18px;padding: 0 4px 0 4px;display: inline-block;background: #fff;margin-right: 10px;text-align: center;cursor: pointer;">41.5</a>
+		     				    <a style="font-size: 12px;text-decoration: none;margin-bottom: 5px;border-color: #ddd;float: none;border: 1px solid #ececec;border-right: 1px solid #a7a7a7;border-bottom: 1px solid #a7a7a7;min-width: 24px;width: auto!important;overflow: visible;height: 18px;line-height: 18px;padding: 0 4px 0 4px;display: inline-block;background: #fff;margin-right: 10px;text-align: center;cursor: pointer;">42</a>
+		     				    <a style="font-size: 12px;text-decoration: none;margin-bottom: 5px;border-color: #ddd;float: none;border: 1px solid #ececec;border-right: 1px solid #a7a7a7;border-bottom: 1px solid #a7a7a7;min-width: 24px;width: auto!important;overflow: visible;height: 18px;line-height: 18px;padding: 0 4px 0 4px;display: inline-block;background: #fff;margin-right: 10px;text-align: center;cursor: pointer;">42.5</a>
+		     				    <a style="font-size: 12px;text-decoration: none;margin-bottom: 5px;border-color: #ddd;float: none;border: 1px solid #ececec;border-right: 1px solid #a7a7a7;border-bottom: 1px solid #a7a7a7;min-width: 24px;width: auto!important;overflow: visible;height: 18px;line-height: 18px;padding: 0 4px 0 4px;display: inline-block;background: #fff;margin-right: 10px;text-align: center;cursor: pointer;">43</a>
+		     				</span>
+		     			</p>
+		     			<p style="font-size: 12px;float: left;display: block;width: 104px;height: 25px;">
+	     					<span style="font-size: 12px;line-height: 25px; margin-right: 8px;float: left;">数量</span>
+	     					<span style="font-size: 12px;display: block;line-height: 25px;margin-right: 8px;float: left;width: 50px;height: 25px;">
+	     						<a style="font-size: 12px;float: left;width: 11px;height: 11px;margin-top: 7px;line-height: 0;font-size: 0;background: url(img/pro_foot2.gif) no-repeat -11px 0;text-decoration: none;color: #666;"></a>
+	     						<em style="float: left;font-size: 12px;font-style: normal;"><input type="hidden" name="oldnum" /><input type="text" value="1" maxlength="1" style="border: 1px solid #ddd;margin-top: 3px;color: #535353;font-size: 12px;width: 26px;height: 20px;"/></em>
+	     						<a style="font-size: 12px;float: left;width: 11px;height: 11px;margin-top: 7px;line-height: 0;font-size: 0;background: url(img/pro_foot2.gif) no-repeat -11px -11px;text-decoration: none;color: #666;"></a>
+	     					</span>
+	     				</p>
+	     				<span style="font-size: 12px;padding-left: 15px;line-height: 25px;float: left;"><span style="color: red;float: left;"><i style="color: #666;font-style: normal;">已选择</i>浅栗色/亮白/亮白</span>
+	     				<a style="font-size: 12px;line-height: 26px;text-align: center;float: left;display: inline-block;width: 88px;height: 26px;margin-left: 20px;text-decoration: none;background: url(img/pro_foot3.png) no-repeat 0 -64px;">立即购买 </a>
+	     				<a style="font-size: 12px;line-height: 26px;text-align: center;float: left;display: inline-block;width: 100px;height: 26px;margin-left: 20px;text-decoration: none;background: url(img/pro_foot3.png) no-repeat 0 -91px;color: #fff;">加入购物车</a>
+	     				<i style="font-style: normal;position: absolute;right: 0;bottom: 0;width: 67px;height: 17px;right: 0; bottom: 0;background: url(img/pro_foot.gif) no-repeat 0 -144px;"></i>
+	     				<i id="pro_btn" style="position: absolute;width: 14px;height: 14px;right: 5px;top: 5px;cursor: pointer;font-style: normal;background: url(img/pro_foot.gif) no-repeat -67px -52px;"></i>
+	     				</span>
+		     		</div>
+		     	</div>
+		     </div> 
+		</div>
+	</body>
+</html>
